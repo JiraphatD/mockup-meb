@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 26.375 26.375">
+    <defs>
+        <style>
+            .cls-1{fill: #fff;stroke:#00bf6c;stroke-width:2px}.cls-2{fill:#00bf6c}.cls-3{fill:none}.cls-4{filter:url(#Oval)}
+        </style>
+        <filter id="Oval" width="26" height="26" x=".375" y=".375" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="1"/>
+            <feGaussianBlur result="blur" stdDeviation=".5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="ic-clear" transform="translate(-166 -132)">
+        <g class="cls-4" transform="translate(166 132)">
+            <circle id="Oval-2" cx="10.5" cy="10.5" r="10.5" class="cls-1" data-name="Oval" transform="translate(1.88 1.88)"/>
+        </g>
+        <path id="Path" d="M8.305.1L4.74 3.66 1.176.1.1 1.176 3.66 4.74.1 8.305l1.08 1.08L4.74 5.82l3.565 3.565 1.08-1.08L5.82 4.74l3.565-3.564z" class="cls-2" transform="translate(173.404 139.404)"/>
+        <path id="Rectangle_181" d="M0 0h24v24H0z" class="cls-3" data-name="Rectangle 181" transform="translate(166 132)"/>
+    </g>
+</svg>

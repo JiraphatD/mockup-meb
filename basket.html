@@ -1,0 +1,1632 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pho/logo_meb.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="searcher.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <script type="text/javascript" src="CookieMonster.js"></script>
+    <title>หนังสืออีบุ๊ก - meb: e-book ร้านอีบุ๊กอันดับ 1</title>
+    <style>
+        * {
+            font-family: 'Noto Sans Thai', sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        .box_herader {
+            position: fixed;
+            width: 100%;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #00af70, #37c13d);
+            height: 58px;
+            width: 100%;
+
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 31;
+            width: 100%;
+            background-color: #e6e6e6;
+            color: white;
+            text-align: center;
+        }
+
+        .hide_menu {
+            background: #f6f6f6;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            height: 70px;
+            transition: height 0.3s ease;
+        }
+
+        .bottom_menu {
+            background: #f6f6f6;
+            width: 100%;
+            text-align: center;
+        }
+
+        .ul_row {
+            display: inline;
+            margin: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ul_row:hover {
+            border-bottom: 4px solid #00bf6c;
+        }
+
+        .ul_low {
+            display: inline;
+            margin: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .notification {
+            position: relative;
+            margin-top: 0.8em;
+            margin-left: 1em;
+            width: 30px;
+        }
+
+        .logo {
+            width: 59px;
+            display: inline-block;
+            margin-top: 12px;
+            margin-bottom: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+
+        }
+
+        
+
+        .head_text {
+            border-bottom: 1px solid black;
+        }
+
+        .book_list {
+            margin: 1em;
+
+        }
+
+        .book1 {
+            width: 188px;
+            text-align: center;
+        }
+
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .all_eb {
+            border: none;
+            background: #f6f6f6;
+            font-size: 32px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .buy_button {
+            background-color: #00bf6c;
+            border: 1px solid #00bf6c;
+            width: 74px;
+            height: 31px;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            border-radius: 3px;
+            float: right;
+        }
+
+        .info {
+            margin-left: 10px;
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 300px;
+            height: 450px;
+        }
+
+        .dropdown-content a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: black;
+            /* padding: 20px 80px; */
+
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #f6f6f6;
+        }
+
+
+        .wrap-text {
+            margin-left: 35%;
+            margin-right: 35%;
+            padding: 15px;
+            background-color: #f6f6f6;
+            margin-bottom: 15px;
+        }
+
+        .header_search {
+            float: right;
+            margin-top: 13px;
+            margin-left: 20px;
+        }
+
+        .icon_search {
+            position: absolute;
+            width: 24px;
+            top: 15px;
+        }
+
+        .input_search {
+            float: left;
+            height: 32px;
+            border-radius: 5px;
+            border: none;
+            font-family: Thonburi, Tahoma, sans-serif !important;
+            font-size: 16px;
+            padding-left: 35px;
+            padding-right: 10px;
+        }
+
+        .but {
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 12px;
+            background-color: #00bf6c;
+            min-width: 70px;
+            height: auto;
+            padding: 0.375rem 0.75rem;
+        }
+
+        .but:hover {
+            border: 1px solid #00bf6c;
+            border-radius: 20px;
+            color: #00bf6c;
+            font-size: 12px;
+            background-color: white;
+            min-width: 70px;
+            height: auto;
+            padding: 0.375rem 0.75rem;
+        }
+
+        .fot {
+            background-color: #f6f6f6;
+        }
+
+        .foot {
+            background-color: #f6f6f6;
+            padding: 3% 0 65px 0;
+            max-width: 1140px;
+            font-family: notosansregular;
+            text-align: left;
+            width: 100%;
+            margin: auto;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+
+        .dropbtn {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropbtn2 {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropbtn3 {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 85;
+            left: 565;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: black;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+        .sub_dro {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            height: 50px;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+            top: -308;
+            left: 275;
+            z-index: 1;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content2 a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: #5a5a5a;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .dropdown-content2 a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .sub_dro:hover .dropdown-content2 {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .sub_dro:hover .dropbtn2 {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+        .sub_dro2 {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            height: 50px;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content3 {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+            top: -308;
+            left: 275;
+            z-index: 1;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content3 a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: #5a5a5a;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .dropdown-content3 a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .sub_dro2:hover .dropdown-content3 {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .sub_dro2:hover .dropbtn3 {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+
+        .cole {
+            color: #5a5a5a;
+            font-size: 12px;
+        }
+
+        .box_basket {
+            max-width: 768;
+
+            margin-top: 8em;
+        }
+
+        .buy_book {
+            padding: 5px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        .del_book {
+            height: 25px;
+            border: 1px solid silver;
+            margin-top: 1.5em;
+            padding-top: 3px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 5px;
+            position: relative;
+            background-color: white;
+            color: silver;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .info_buy_book {
+            margin: 0.5em;
+            line-height: 0.5;
+            margin-right: 1.5em;
+        }
+
+        .no_books {
+            margin-top: 2em;
+            color: #d01818;
+            text-align: center;
+            margin-bottom: 10em;
+
+        }
+
+        .next_books {
+            margin-top: 2em;
+            text-align: center;
+            color: #00bf6c;
+        }
+
+        .pay_books {
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+        .button_buy {
+            background: #00bf6c;
+            border: 1px solid #00bf6c;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 40px;
+            padding: 7px;
+            width: 260px;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+
+
+        .header_user {
+            position: relative;
+            margin-top: 0.8em;
+            margin-left: 2em;
+        }
+
+
+        
+
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .book {
+            width: 192px;
+            border: 1px solid black;
+            padding-bottom: 10px;
+        }
+
+
+        .campaing_banner {
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        input[type="text"]:focus::placeholder {
+            color: #00bf6c;
+        }
+
+        .btn-success {
+            height: 32px;
+            padding: 5px;
+        }
+
+        .btn.btn-secondary.btn-lg.active:focus {
+            outline: 5px auto black;
+        }
+
+        .signout_btn {
+            background: #fff;
+            color: #d01818;
+            border: 1px solid #d01818;
+            border-radius: 20px;
+            width: 100px;
+            font-size: 12px;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .signout_btn:hover {
+            background: #d01818;
+            color: #fff;
+        }
+
+
+        .category {
+            border-radius: 5px;
+            color: white;
+            margin-top: 1em;
+            margin-left: 0.5em;
+        }
+
+        .text_top_hit {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .glyphicon-camera {
+            color: #666;
+            background: #e6e6e6;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            position: absolute;
+            left: 55;
+            top: 55;
+            /*top: unset;*/
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .nav-link:hover {
+            color: black;
+        }
+
+        .how_to_content {
+            width: 670px;
+        }
+
+        .showHowInfo {
+            display: block;
+        }
+
+        .howToInfo {
+            font-size: 14px;
+        }
+
+        .count_cart {
+            display: none;
+            position: absolute;
+            background: #e0166a;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            right: -8px;
+            color: #fff;
+            left: 85%;
+            top: -8px;
+        }
+
+        .cart{
+            position: relative;
+            left: 10px;
+            top: 12px;
+        }
+
+        /*test modal*/
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+
+        .button_add {
+            background: #fff;
+            border: 1px solid #00bf6c;
+            color: #00bf6c;
+            font-size: 16px;
+            border-radius: 40px;
+            padding: 7px;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .button_buy {
+            margin-left: 33%;
+            margin-right: 33%;
+            background: #00bf6c;
+            border: 1px solid #00bf6c;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 40px;
+            padding: 7px;
+            width: 35%;
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .botton_meb_coin {
+            background: #f58b1b;
+            border: 1px solid #f58b1b;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 40px;
+            padding: 7px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: 2em;
+
+        }
+
+
+        .box_ab {
+            position: relative;
+            left: 15%;
+            width: 70%;
+            padding: 2em;
+        }
+
+
+        /* Extra styles for the cancel button */
+
+
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            position: relative;
+            top: 15%;
+            text-align: center;
+            padding: 0;
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 27%;
+            /* Could be more or less, depending on screen size */
+            border: 10px solid rgba(0, 0, 0, .2);
+            border-radius: 0.3rem;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 8%;
+        }
+
+        .close:active {
+            border: 2px solid black;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+        .dropdown-item {
+        padding: 0px;
+        }
+        .add_coin {
+            float: right;
+        }
+        #userdropdownlist {
+            margin-bottom: 5px;
+            height: 21;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+        #userdropdownlist:hover {
+            color: #00bf6c;
+            text-decoration: underline;
+        }
+        /*end*/
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <div id="idtest" class="modal">
+        <div class="modal-content animate" >
+            <div onclick="closeWithX()" class="close"><img
+                    src="pho/ic-close.png">
+            </div>
+            <div class="box_ab">
+                <p>เพิ่มหนังสือลงตะกร้าแล้ว</p>
+                <button class="button_add" onclick="closeWithX()">เลือกดูหนังสือเล่มอื่นต่อ</button>
+                <div style="border-bottom:  1px solid black; padding-bottom: 1em;">
+                    <button class="button_buy" onclick="document.location='basket.html'">ชำระเงิน</button>
+                </div>
+                <button class="botton_meb_coin">ชำระเงินด้วย <img
+                        src="pho/icon_coin.png"> meb coin</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box_header sticky" id="box_header">
+        <div class="header">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="top_bar_left">
+                        <div class="row">
+                            <div class="header_user">
+                                <button
+                                    style="font-size: 14px;cursor: pointer;background-color: rgba(0,0,0,.12);border: none;padding: 0 15px;height: 32px;"
+                                    class="btn btn-secondary btn-lg active" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div>
+                                        สวัสดี User
+                                        <div style="width:295px;padding:15px;" class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton">
+                                            <div>
+                                                <div style="margin-bottom:5px;float:left;">
+                                                    <img style="width: 68px;height: 68px;border-radius:50%;"
+                                                        src="pho/avatar50x50.png">
+                                                    <img src="pho/glyphicons-basic-12-camera@2x.png"
+                                                        class="glyphicon-camera" style="cursor: pointer;">
+                                                </div>
+                                                <div style="padding-left:10px;float:left;">
+                                                    <h1
+                                                        style="font-weight: 700;font-size: 18px;height: 27px;overflow: hidden; width: 100%">
+                                                        TestingAccount</h1>
+                                                    <p1
+                                                        style="color: #7e7e7e;font-size: 14px;height: 21px;width: 			100%;">
+                                                        User</p1><br>
+                                                </div>
+                                                <div style="float:right;">
+                                                    <div class="signout_btn">ออกจากระบบ</div>
+                                                </div>
+                                            </div>
+                                            <div style="margin-top:89px;" class="dropdown-divider"></div>
+                                            <div>
+                                                <div style="font-size:14px" class="dropdown-item user">meb coin
+                                                    <span style="width: 18px;margin-top: -5px;margin-left: 3px;">
+                                                        <img src="pho/icon_coin.png"
+                                                            title="Icon Coin">
+                                                    </span>
+                                                    <span style="color: #f58b1b;margin-left: 3px;">0.00
+                                                    </span>
+                                                    <span class="add_coin" title="coin">
+                                                        เติม coin
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a id="userdropdownlist" class="dropdown-item list">รายการที่อยากได้</a>
+                                            <a id="userdropdownlist" class="dropdown-item list">รายการที่ติดตาม</a>
+                                            <a id="userdropdownlist" class="dropdown-item list">Gift Code</a>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a id="userdropdownlist" class="dropdown-item list">จัดการบัญชี</a>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a style="font-size:14px;cursor:default;"
+                                                class="dropdown-item list">ข้อมูลของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">สถานะสมาชิก</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">บุฟเฟต์ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">อุปกรณ์ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">สิทธิพิเศษของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">meb
+                                                stamp ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">ประวัติการสั่งซื้อของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">ชั้นหนังสือของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">รีวิวของฉัน</a>
+                                        </div>
+                                        <img
+                                            src="pho/arrow-drop-down-white.png">
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="notification">
+                                <img src="pho/ic-noti-white.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <a href="index.html"><img class="logo"
+                                src="pho/logo_store@2x.png?1407"></a>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <div class="top_bar_right row">
+                        <a href="wishlist.html">
+                            <div style="position: relative; margin-top: 0.8em; margin-left: 1em;">
+                                <button class="btn btn-success" id="wish">
+                                    <img src="pho/ic-wishlist-2-30px.png"
+                                        width="24px">
+                                </button>
+                            </div>
+                        </a>
+
+                        <div class="cart" id="cart">
+                            <div class="count_cart" id="count_cart"></div>
+                            <a href="basket.html">
+                                <button class="btn btn-success">
+                                    <img id="img_cart"
+                                        src="pho/ic-cart-white.png"
+                                        width="24px">
+                                    ตะกร้า
+                                </button></a>
+                        </div>
+                        <div class="header_search">
+                            <form method="post" id="search_main_header" action="" style="float:right;">
+                                <input type="image" class="icon_search"
+                                    src="pho/ic-search-grey@2x.png">
+                                <input type="text" class="input_search" name="search" placeholder="ค้นหาหนังสือ"
+                                    maxlength="100" autocomplete="off">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_menu">
+            <ul>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <li class="ul_low"><a style="text-decoration:none;color:black;">อีบุ๊กทั้งหมด</a>
+                            <img src="pho/arrow-down.png">
+                        </li>
+                    </button>
+
+                    <div class="dropdown-content" style="position: fixed;padding-left: 5;padding-right: 5;">
+                        <a href="#" title="Ebook Store" style="border-bottom: 1px solid grey;"><span
+                                style="color: #5a5a5a;">อีบุ๊กทั้งหมด</span></a>
+                        <a href="#" title="Fiction Store">นิยายทั้งหมด</a>
+                        <a href="#" title="Fiction Store">นิยายแปล</a>
+                        <a href="#" title="Cartoon Store">การ์ตูนทั้งหมด</a>
+                        <a href="#" title="Other Store">อีบุ๊กทั่วไป</a>
+                        <div class="sub_dro" style="padding-right: 10;">
+                            <a href="#" title="Audio Store" style="border-bottom: 1px solid grey;">หนังสือเสียง<img
+                                    src="pho/arrow-right.png"
+                                    style="width: 20px;float: right;"></a>
+
+                            <div class="dropdown-content2">
+                                <a href="#" title="Cartoon Store">นิยาย</a>
+                                <a href="#" title="Other Store">ทั่วไป</a>
+                            </div>
+                        </div>
+                        <div class="sub_dro" style="padding-right: 10;">
+                            <a href="#" title="Buffet Store" style="color: #5a5a5a;">บุฟเฟต์<img
+                                    src="pho/arrow-right.png"
+                                    style="width: 20px;float: right;overflow: scroll;"></a>
+                            <div class="dropdown-content2" style="top: -357;left: 275;overflow: scroll;">
+                                <a href="#" title="Cartoon Store" style="color: black;">ทั้งหมด</a>
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">การ์ตูน<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">การ์ตูนทั้งหมด</a>
+                                        <a href="#" title="Other Store">การ์ตูน Boy Love / Yaoi</a>
+                                        <a href="#" title="Other Store">การ์ตูนเด็ก/การ์ตูนความรู้</a>
+                                        <a href="#" title="Other Store">การ์ตูนทั่วไป</a>
+                                        <a href="#" title="Other Store">การ์ตูนรายตอน</a>
+                                    </div>
+                                </div>
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">นิตยสาร<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">นิตยสารทั้งหมด</a>
+                                        <a href="#" title="Other Store">นิตยสาร Lifestyle</a>
+                                        <a href="#" title="Other Store">นิตยสาร Metro Lifestyle</a>
+                                        <a href="#" title="Other Store">นิตยสารการเงินการลงทุน</a>
+                                        <a href="#" title="Other Store">นิตยสารกีฬา</a>
+                                        <a href="#" title="Other Store">นิตยสารข่าว</a>
+                                        <a href="#" title="Other Store">นิตยสารความรู้</a>
+                                        <a href="#" title="Other Store">นิตยสารคอมพิวเตอรฺ์</a>
+                                        <a href="#" title="Other Store">นิตยสารชี้ช่องทำกิน</a>
+                                        <a href="#" title="Other Store">นิตยสารชีวิตคู่เเละครอบครัว</a>
+                                        <a href="#" title="Other Store">นิตยสารดนตรี</a>
+                                        <a href="#" title="Other Store">นิตยสารดาราเเละบันเทิง</a>
+                                        <a href="#" title="Other Store">นิตยสารท่องเที่ยว</a>
+                                        <a href="#" title="Other Store">นิตยสารบริหารธุรกิจ</a>
+                                        <a href="#" title="Other Store">นิตยสารบ้านเเละที่อยู่อาศัย</a>
+                                        <a href="#" title="Other Store">นิตยสารผู้ชาย</a>
+                                        <a href="#"
+                                            title="Other Store">นิตยสารพระ/ดวง/โหราศาสตร์/เรื่องเหนือธรรมชาติ</a>
+                                        <a href="#" title="Other Store">นิตยสารแฟชั่นเเละความสวยงาม</a>
+                                        <a href="#" title="Other Store">นิตยสารไฟฟ้าเเละอิเล็กทรอนิกส์</a>
+                                        <a href="#" title="Other Store">นิตยสารภาษา</a>
+                                        <a href="#" title="Other Store">นิตยสารรถยนตร์</a>
+                                        <a href="#" title="Other Store">นิตยสารวัยรุ่น</a>
+                                        <a href="#" title="Other Store">นิตยสารศิลปะ/ภาพถ่าย/การออกเเบบ</a>
+                                        <a href="#" title="Other Store">นิตยสารสังคมเเละชุมชน</a>
+                                        <a href="#" title="Other Store">นิตยสารสาระบันเทิง</a>
+                                        <a href="#" title="Other Store">นิตยสารสุขภาพเเละอาหาร</a>
+                                        <a href="#" title="Other Store">นิตยสารอุตสาหกรรม</a>
+                                        <a href="#" title="Other Store"></a>
+                                    </div>
+                                </div>
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">นิยาย/วรรณกรรม<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">นิยายทั้งหมด</a>
+                                        <a href="#" title="Other Store">Fan Fiction แฟนฟิคชั่น</a>
+                                        <a href="#" title="Other Store">นิยาย Girl Love/Yuri</a>
+                                        <a href="#" title="Other Store">นิยายกำลังภายใน</a>
+                                        <a href="#" title="Other Store">นิยายชีวิต/ดรามา</a>
+                                        <a href="#" title="Other Store">นิยายไซไฟ</a>
+                                        <a href="#" title="Other Store">นิยายตลก</a>
+                                        <a href="#" title="Other Store">นิยายผจญภัย/บู๊แอกชัน</a>
+                                        <a href="#" title="Other Store">นิยายแฟนตาซี</a>
+                                        <a href="#" title="Other Store">นิยายรัก</a>
+                                        <a href="#" title="Other Store">นิยายรักจีนโบราณ</a>
+                                        <a href="#" title="Other Store">นิยายรักวัยรุ่น</a>
+                                        <a href="#" title="Other Store">นิยายรักสำหรับผู้ใหญ่</a>
+                                        <a href="#" title="Other Store">นิยายโรมานซ์</a>
+                                        <a href="#" title="Other Store">นิยายลึกลับ/เขย่าขวัญ</a>
+                                        <a href="#" title="Other Store">นิยายวาย Boy Love/Yaoi</a>
+                                        <a href="#" title="Other Store">นิยายสืบสวนสอบสวน/ทริลเลอร์</a>
+                                        <a href="#" title="Other Store">นิยายเสียดสีสังคม</a>
+                                        <a href="#" title="Other Store">พาราเนอร์มอล โรมานซ์</a>
+                                        <a href="#" title="Other Store">รวมเรื่องสั้น</a>
+                                        <a href="#" title="Other Store">ไลท์โนเวล</a>
+                                        <a href="#" title="Other Store">วรรณกรรมคลาสสิก/วรรณคดีไทย</a>
+                                        <a href="#" title="Other Store">วรรณกรรมทั่วไป</a>
+                                        <a href="#" title="Other Store">วรรณกรรมเยาวชน</a>
+                                        <a href="#" title="Other Store"></a>
+
+                                    </div>
+                                </div>
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">หนังสือพิมพ์<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store">PAKTAI FOCUS</a>
+                                        <a href="#" title="Other Store">Pattaya Mail</a>
+                                        <a href="#" title="Other Store">Transport Journal</a>
+                                        <a href="#" title="Other Store">ข่าวสด</a>
+                                        <a href="#" title="Other Store">ข่าวหุ้น</a>
+                                        <a href="#" title="Other Store">ประชาชาติธุรกิจ</a>
+                                        <a href="#" title="Other Store">โพสต์ทูเดย์</a>
+                                        <a href="#" title="Other Store">มติชน</a>
+                                    </div>
+                                </div>
+
+                                <a href="#" title="Other Store">Foreign books</a>
+                                <a href="#" title="Other Store">กฎหมาย</a>
+                                <a href="#" title="Other Store">การเงินการลงทุน</a>
+                                <a href="#" title="Other Store">การตลาดเเละการบัญชี</a>
+                                <a href="#" title="Other Store">การบริหารงานบุคคล</a>
+                                <a href="#" title="Other Store">การประกอบอาหาร</a>
+                                <a href="#" title="Other Store">การเมือง/รัฐศาสตร์</a>
+                                <a href="#" title="Other Store">การศึกษา/ตำราเรียน</a>
+                                <a href="#" title="Other Store">การออกเเบบเเละสร้างสรรค์</a>
+                                <a href="#" title="Other Store">ความเชื่อเเละศาสนา/พระเครื่อง</a>
+                                <a href="#" title="Other Store">ความรู้ทั่วไป</a>
+                                <a href="#" title="Other Store">ความรู้สึกดีๆ(Feel Good)</a>
+                                <a href="#" title="Other Store">ความรู้เสริมสำหรับเด็กเเละเยาวชน</a>
+                                <a href="#" title="Other Store">คอมพิวเตอร์</a>
+                                <a href="#" title="Other Store">จิตวิทยา</a>
+                                <a href="#" title="Other Store">ชีวประวัติ</a>
+                                <a href="#" title="Other Store">ดนตรีเเละบันเทิง</a>
+                                <a href="#" title="Other Store">ดวงพยากรณ์/ฮวงจุ้ย/โหราศาสตร์</a>
+                                <a href="#" title="Other Store">ท่องเที่ยว</a>
+                                <a href="#" title="Other Store">เกิดพระเกียรติ</a>
+                                <a href="#" title="Other Store">ธรรมะ/ปรัชญา</a>
+                                <a href="#" title="Other Store">บทกวี/กลอน</a>
+                                <a href="#" title="Other Store">บริหารจัดการ</a>
+                                <a href="#" title="Other Store">บ้านเเละที่อยู่อาศัย</a>
+                                <a href="#" title="Other Store">ประวัติศาสตร์</a>
+                                <a href="#" title="Other Store">พจนานุกรม/ปทานุกรม/สารานุกรม</a>
+                                <a href="#" title="Other Store">พัฒนาตนเอง</a>
+                                <a href="#" title="Other Store">ภาษา</a>
+                                <a href="#" title="Other Store">เเม่เเละเด็ก</a>
+                                <a href="#" title="Other Store">วิทยาศาสตร์เเละเทคโนโลยี</a>
+                                <a href="#" title="Other Store">ศิลปะเเละภาพถ่าย</a>
+                                <a href="#" title="Other Store">เศรษฐศาสตร์เเละธุรกิจ</a>
+                                <a href="#" title="Other Store">สังคมเเละชุมชน</a>
+                                <a href="#" title="Other Store">สัตว์เลี้ยง</a>
+                                <a href="#" title="Other Store">สารคดี</a>
+                                <a href="#" title="Other Store">สาระบันเทิง</a>
+                                <a href="#" title="Other Store">สุขภาพ</a>
+                                <a href="#" title="Other Store">หนังสือ/นิทานภาพสำหรับเด็ก</a>
+                                <a href="#" title="Other Store">หนังสือรุ่น/ไดเรกทอรี</a>
+                                <a href="#" title="Other Store">อาชีพเเละชี้ช่องทำกิน</a>
+                                <a href="#" title="Other Store"></a>
+                            </div>
+                        </div>
+
+                        <div class="sub_dro" style="padding-right: 10;">
+                            <a href="#" title="Category" style="color: #5a5a5a;">หมวดหมู่ทั้งหมด<img
+                                    src="pho/arrow-right.png"
+                                    style="width: 20px;float: right;"></a>
+                            <div class="dropdown-content2" style="top: -408;left: 275;overflow: scroll;">
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">การ์ตูน<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">การ์ตูนทั้งหมด</a>
+                                        <a href="#" title="Other Store">การ์ตูน Boy Love / Yaoi</a>
+                                        <a href="#" title="Other Store">การ์ตูนเด็ก/การ์ตูนความรู้</a>
+                                        <a href="#" title="Other Store">การ์ตูนทั่วไป</a>
+                                        <a href="#" title="Other Store">การ์ตูนรายตอน</a>
+                                    </div>
+                                </div>
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">นิตยสาร<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">นิตยสารทั้งหมด</a>
+                                        <a href="#" title="Other Store">นิตยสาร Lifestyle</a>
+                                        <a href="#" title="Other Store">นิตยสาร Metro Lifestyle</a>
+                                        <a href="#" title="Other Store">นิตยสารการเงินการลงทุน</a>
+                                        <a href="#" title="Other Store">นิตยสารกีฬา</a>
+                                        <a href="#" title="Other Store">นิตยสารข่าว</a>
+                                        <a href="#" title="Other Store">นิตยสารความรู้</a>
+                                        <a href="#" title="Other Store">นิตยสารคอมพิวเตอรฺ์</a>
+                                        <a href="#" title="Other Store">นิตยสารชี้ช่องทำกิน</a>
+                                        <a href="#" title="Other Store">นิตยสารชีวิตคู่เเละครอบครัว</a>
+                                        <a href="#" title="Other Store">นิตยสารดนตรี</a>
+                                        <a href="#" title="Other Store">นิตยสารดาราเเละบันเทิง</a>
+                                        <a href="#" title="Other Store">นิตยสารท่องเที่ยว</a>
+                                        <a href="#" title="Other Store">นิตยสารบริหารธุรกิจ</a>
+                                        <a href="#" title="Other Store">นิตยสารบ้านเเละที่อยู่อาศัย</a>
+                                        <a href="#" title="Other Store">นิตยสารผู้ชาย</a>
+                                        <a href="#"
+                                            title="Other Store">นิตยสารพระ/ดวง/โหราศาสตร์/เรื่องเหนือธรรมชาติ</a>
+                                        <a href="#" title="Other Store">นิตยสารแฟชั่นเเละความสวยงาม</a>
+                                        <a href="#" title="Other Store">นิตยสารไฟฟ้าเเละอิเล็กทรอนิกส์</a>
+                                        <a href="#" title="Other Store">นิตยสารภาษา</a>
+                                        <a href="#" title="Other Store">นิตยสารรถยนตร์</a>
+                                        <a href="#" title="Other Store">นิตยสารวัยรุ่น</a>
+                                        <a href="#" title="Other Store">นิตยสารศิลปะ/ภาพถ่าย/การออกเเบบ</a>
+                                        <a href="#" title="Other Store">นิตยสารสังคมเเละชุมชน</a>
+                                        <a href="#" title="Other Store">นิตยสารสาระบันเทิง</a>
+                                        <a href="#" title="Other Store">นิตยสารสุขภาพเเละอาหาร</a>
+                                        <a href="#" title="Other Store">นิตยสารอุตสาหกรรม</a>
+                                        <a href="#" title="Other Store"></a>
+                                    </div>
+                                </div>
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">นิยาย/วรรณกรรม<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store" style="color: black;">นิยายทั้งหมด</a>
+                                        <a href="#" title="Other Store">Fan Fiction แฟนฟิคชั่น</a>
+                                        <a href="#" title="Other Store">นิยาย Girl Love/Yuri</a>
+                                        <a href="#" title="Other Store">นิยายกำลังภายใน</a>
+                                        <a href="#" title="Other Store">นิยายชีวิต/ดรามา</a>
+                                        <a href="#" title="Other Store">นิยายไซไฟ</a>
+                                        <a href="#" title="Other Store">นิยายตลก</a>
+                                        <a href="#" title="Other Store">นิยายผจญภัย/บู๊แอกชัน</a>
+                                        <a href="#" title="Other Store">นิยายแฟนตาซี</a>
+                                        <a href="#" title="Other Store">นิยายรัก</a>
+                                        <a href="#" title="Other Store">นิยายรักจีนโบราณ</a>
+                                        <a href="#" title="Other Store">นิยายรักวัยรุ่น</a>
+                                        <a href="#" title="Other Store">นิยายรักสำหรับผู้ใหญ่</a>
+                                        <a href="#" title="Other Store">นิยายโรมานซ์</a>
+                                        <a href="#" title="Other Store">นิยายลึกลับ/เขย่าขวัญ</a>
+                                        <a href="#" title="Other Store">นิยายวาย Boy Love/Yaoi</a>
+                                        <a href="#" title="Other Store">นิยายสืบสวนสอบสวน/ทริลเลอร์</a>
+                                        <a href="#" title="Other Store">นิยายเสียดสีสังคม</a>
+                                        <a href="#" title="Other Store">พาราเนอร์มอล โรมานซ์</a>
+                                        <a href="#" title="Other Store">รวมเรื่องสั้น</a>
+                                        <a href="#" title="Other Store">ไลท์โนเวล</a>
+                                        <a href="#" title="Other Store">วรรณกรรมคลาสสิก/วรรณคดีไทย</a>
+                                        <a href="#" title="Other Store">วรรณกรรมทั่วไป</a>
+                                        <a href="#" title="Other Store">วรรณกรรมเยาวชน</a>
+                                        <a href="#" title="Other Store"></a>
+
+                                    </div>
+                                </div>
+
+                                <div class="sub_dro2" style="padding-right: 10;">
+                                    <a href="#" title="Other Store">หนังสือพิมพ์<img
+                                            src="pho/arrow-right.png"
+                                            style="width: 20px;float: right;"></a>
+                                    <div class="dropdown-content3"
+                                        style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                        <a href="#" title="Other Store">Bangkok Post</a>
+                                        <a href="#" title="Other Store">BLT Bangkok</a>
+                                        <a href="#" title="Other Store">PAKTAI FOCUS</a>
+                                        <a href="#" title="Other Store">Pattaya Mail</a>
+                                        <a href="#" title="Other Store">Transport Journal</a>
+                                        <a href="#" title="Other Store">กรุงเทพธุรกิจ</a>
+                                        <a href="#" title="Other Store">ข่าวสด</a>
+                                        <a href="#" title="Other Store">ข่าวหุ้น</a>
+                                        <a href="#" title="Other Store">คมชัดลึก</a>
+                                        <a href="#" title="Other Store">จันทรเกษมโพสต์</a>
+                                        <a href="#" title="Other Store">ประชาชาติธุรกิจ</a>
+                                        <a href="#" title="Other Store">มติชน</a>
+                                        <a href="#" title="Other Store">สยามอินชัวร์ นิวส์</a>
+                                        <a href="#" title="Other Store">โพสต์ทูเดย์</a>
+                                        <a href="#" title="Other Store"></a>
+                                    </div>
+                                </div>
+
+                                <a href="#" title="Other Store">Foreign books</a>
+                                <a href="#" title="Other Store">กฎหมาย</a>
+                                <a href="#" title="Other Store">การเงินการลงทุน</a>
+                                <a href="#" title="Other Store">การตลาดเเละการบัญชี</a>
+                                <a href="#" title="Other Store">การบริหารงานบุคคล</a>
+                                <a href="#" title="Other Store">การประกอบอาหาร</a>
+                                <a href="#" title="Other Store">การเมือง/รัฐศาสตร์</a>
+                                <a href="#" title="Other Store">การศึกษา/ตำราเรียน</a>
+                                <a href="#" title="Other Store">การออกเเบบเเละสร้างสรรค์</a>
+                                <a href="#" title="Other Store">ความเชื่อเเละศาสนา/พระเครื่อง</a>
+                                <a href="#" title="Other Store">ความรู้ทั่วไป</a>
+                                <a href="#" title="Other Store">ความรู้สึกดีๆ(Feel Good)</a>
+                                <a href="#" title="Other Store">ความรู้เสริมสำหรับเด็กเเละเยาวชน</a>
+                                <a href="#" title="Other Store">คอมพิวเตอร์</a>
+                                <a href="#" title="Other Store">จิตวิทยา</a>
+                                <a href="#" title="Other Store">ชีวประวัติ</a>
+                                <a href="#" title="Other Store">ดนตรีเเละบันเทิง</a>
+                                <a href="#" title="Other Store">ดวงพยากรณ์/ฮวงจุ้ย/โหราศาสตร์</a>
+                                <a href="#" title="Other Store">ท่องเที่ยว</a>
+                                <a href="#" title="Other Store">เกิดพระเกียรติ</a>
+                                <a href="#" title="Other Store">ธรรมะ/ปรัชญา</a>
+                                <a href="#" title="Other Store">บทกวี/กลอน</a>
+                                <a href="#" title="Other Store">บริหารจัดการ</a>
+                                <a href="#" title="Other Store">บ้านเเละที่อยู่อาศัย</a>
+                                <a href="#" title="Other Store">ประวัติศาสตร์</a>
+                                <a href="#" title="Other Store">พจนานุกรม/ปทานุกรม/สารานุกรม</a>
+                                <a href="#" title="Other Store">พัฒนาตนเอง</a>
+                                <a href="#" title="Other Store">ภาษา</a>
+                                <a href="#" title="Other Store">เเม่เเละเด็ก</a>
+                                <a href="#" title="Other Store">วิทยาศาสตร์เเละเทคโนโลยี</a>
+                                <a href="#" title="Other Store">ศิลปะเเละภาพถ่าย</a>
+                                <a href="#" title="Other Store">เศรษฐศาสตร์เเละธุรกิจ</a>
+                                <a href="#" title="Other Store">สังคมเเละชุมชน</a>
+                                <a href="#" title="Other Store">สัตว์เลี้ยง</a>
+                                <a href="#" title="Other Store">สารคดี</a>
+                                <a href="#" title="Other Store">สาระบันเทิง</a>
+                                <a href="#" title="Other Store">สุขภาพ</a>
+                                <a href="#" title="Other Store">หนังสือ/นิทานภาพสำหรับเด็ก</a>
+                                <a href="#" title="Other Store">หนังสือรุ่น/ไดเรกทอรี</a>
+                                <a href="#" title="Other Store">อาชีพเเละชี้ช่องทำกิน</a>
+                                <a href="#" title="Other Store">อื่นๆ</a>
+
+                            </div>
+                        </div>
+                        <div class="sub_dro" style="padding-right: 10;">
+                            <a href="#" title="Publisher" style="color: #5a5a5a;">สำนักพิมพ์<img
+                                    src="pho/arrow-right.png"
+                                    style="width: 20px;float: right;"></a>
+                            <div class="dropdown-content2" style="top: -457;left: 275;overflow: scroll;">
+                                 <div class="header_search">
+                            <form method="post" id="search_main_header" action="" style="float:right;">
+                                <img class="icon_search" id="iconSearch"
+                                    src="pho/ic-search-grey@2x.png" onclick="searchClicked();">
+                                <script>function searchClicked(){search(document.getElementById("myInput").value);}</script>
+                                <div class="autocomplete">
+                                    <input type="text" class="input_search" name="search" placeholder="ค้นหาหนังสือ"
+                                        maxlength="100" autocomplete="off" id="myInput">
+                                </div>
+                            </form>
+                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <li class="ul_row"><a style="text-decoration:none;color:black;">หน้าแรก</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">ขายดี</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">มาใหม่</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">โปรโมชัน</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">ฟรีกระจาย</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">ฮิตขึ้นหิ้ง</a></li>
+                <li class="ul_row"><a style="text-decoration:none;color:black;">แนะนำ</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="check_count.js"></script>
+
+    <div class="container box_basket" id="container">
+        <div style="border-bottom: 1px solid #e1e1e1; width: 100%; text-align: center;">
+            <h1 style="font-size: 32px;"> ตะกร้า</h1>
+        </div>
+        <div class="books_basket" id="books_basket"></div>
+        <div class="next_books" id="next_books"></div>
+        <div class="pay_books" id="pay_books"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let requestURL = 'books2.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                book(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+        var money = 0;
+
+        function book(data) {
+            bookLister(data);
+            var basket = cookiemonster.get("basket");
+            if (basket.length > 0) {
+                for (var i = 0; i < basket.length; i++) {
+                    document.getElementById('books_basket').innerHTML += '<div class="buy_book" id="' + basket[i] + '"><div class="row"><img src="' + data[basket[i]].img + '" style="width: 52px; max-height: 76px; margin-left: 1.5em;"><div class="col-md-9 info_buy_book"><p ><b style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">' + data[basket[i]].title + '</b></p><p style="font-size: 12px;">฿'+ data[basket[i]].price + '</p></div><button class="del_book" onclick="del_book(' + basket[i] + ',' + data[basket[i]].price + ')"><img src="pho/trash@2x.png" width="13px" height="15px">&nbsp;&nbsp;ลบ</button></div></div>';
+                    money += Number(data[basket[i]].price);
+                }
+                document.getElementById('next_books').innerHTML += '<p style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;font-size: 14px;">เลือกซื้อหนังสือเล่มอื่นต่อ</p>';
+                document.getElementById('pay_books').style.background = "#f6f6f6";
+                document.getElementById('pay_books').innerHTML += '<p id="money"style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;font-size: 20px;">ยอดชำระ <b>฿' + money + '</b></p><button class="button_buy">ไปหน้าชำระเงิน</button>';
+            }
+            else {
+                document.getElementById('books_basket').innerHTML += '<div class="no_books"style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">ไม่พบข้อมูลในตะกร้าสินค้า</div>';
+            }
+
+
+
+        }
+
+        function del_book(book_id, price) {
+            delBasket(book_id);
+            var basket = cookiemonster.get("basket");
+            var count_cart = basket.length;
+            cart(count_cart);
+            document.getElementById('books_basket').removeChild(document.getElementById(book_id));
+            money -= Number(price);
+            document.getElementById('money').innerHTML = '<p id="money" style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">ยอดชำระ ฿ ' + money + '</p>';
+            if (basket.length == 0) {
+                document.getElementById('container').removeChild(document.getElementById('next_books'));
+                document.getElementById('container').removeChild(document.getElementById('pay_books'));
+                document.getElementById('container').innerHTML += '<div class="no_books" style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">ไม่พบข้อมูลในตะกร้าสินค้า</div>';
+            }
+        }
+
+    </script>
+
+    <div style="text-align: center;">
+        <br><br><p style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">คุณนักอ่านสามารถอ่านอีบุ๊กผ่านแอพพลิเคชัน<b> meb : mobile-ebooks </b>ได้บนอุปกรณ์เหล่านี้</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" style="text-align: center;">
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;padding: 5%;">
+
+                    <p><b style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">อุปกรณ์มือถือ, แท็บเล็ต</b> </p>
+
+                    <div class="row"">
+                            <div class="
+                        col-sm-4"style="border: solid 1px #e6e6e6;border-radius: 5px;padding-top: 5%;;margin:5%;max-width: 23.333333%;">
+                        <img src="pho\device-logo-apple@2x.png">
+                        <p style="font-size: 12px;font-family: Helvetica,Thonburi,Tahoma,sans-serif;">iPhone,iPad</p>
+                        <p style="font-size: 12px;"><span style="color: #00bf6c;">App Store</span></p>
+                    </div>
+                    <div class="col-sm-4"
+                        style="border: solid 1px #e6e6e6;border-radius: 5px;padding-top: 5%;;margin:5%;max-width: 23.333333%;">
+                        <img src="pho\device-logo-android@2x.png">
+                        <p style="font-size: 12px;padding-left: 0;">Android</p>
+                        <p style="font-size: 12px;"><span style="color: #00bf6c;">Google Play</span></p>
+                    </div>
+                    <div class="col-sm-4"
+                        style="border: solid 1px #e6e6e6;border-radius: 5px;padding-top: 5%;;margin:5%;max-width: 23.333333%;">
+                        <img src="pho\device-logo-android@2x.png">
+                        <p style="font-size: 11px;">Boox, E-Reader</p>
+                        <p style="font-size: 11px;"><span style="color: #00bf6c;">Google Play</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6" style="text-align: center;padding: 5%;">
+
+                <p><b style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">คอมพิวเตอร์ Laptop, Desktop</b></p>
+
+                <div class="row">
+                    <div class="col-sm-4"
+                        style="border: solid 1px #e6e6e6;border-radius: 5px;padding-top: 5%;margin:5%;max-width: 23.333333%;">
+                        <img src="pho\device-logo-apple@2x.png">
+                        <p style="font-size: 12px;">MacO S X</p>
+                        <p style="font-size: 12px;"><span style="color: #00bf6c;">App Store</span></p>
+                    </div>
+                    <div class="col-sm-4"
+                        style="border: solid 1px #e6e6e6;border-radius: 5px;padding-top: 5%;margin:5%;max-width: 23.333333%;">
+                        <img src="pho\device-logo-windows@2x.png">
+                        <p style="font-size: 12px;padding-left: 0;">Windows 10</p>
+                        <p style="font-size: 12px;"><span style="color: #00bf6c;">Microsoft Store</span></p>
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <p style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">ไม่สามารถอ่านอีบุ๊กบนหน้าเว็บ หรือดาวน์โหลดไฟล์ได้</p>
+        <p style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;"><span style="color: #d01818;"><b style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;">และจะ<span style="font-family: Helvetica,Thonburi,Tahoma,sans-serif;border-bottom: 1px solid #d01818;">ไม่มีการจัดส่งหนังสือเป็นรูปเล่มให้ทางไปรษณีย์</span>
+                </b></span> กรุณาทำความเข้าใจก่อนตัดสินใจสั่งซื้อค่ะ</p>
+        <br><br><br>
+    </div>
+
+    <div class="col-sm-3"></div>
+    </div>
+
+    <div class="fot">
+        <div class="row foot">
+            <div class="col-sm-3">
+                <p><b>เลือกหมวดหมู่</b></p>
+                <h6>นิยาย</h6>
+                <h6>การ์ตูน</h6>
+                <h6>แม็กกาซีน</h6>
+                <h6>ทั่วไป</h6>
+                <h6>หนังสือเสียง</h6>
+                <h6>บุฟเฟต์</h6>
+            </div>
+            <div class="col-sm-3">
+                <p><b>บริการช่วยเหลือ</b></p>
+                <h6>วิธีการใช้งาน</h6>
+                <h6>ขายอีบุ๊กกับเรา</h6>
+                <h6>meb coin</h6>
+                <h6>Stamp คืออะไร?</h6>
+                <h6>Gift Code คืออะไร?</h6>
+                <h6>เงื่อนไขในการใช้บริการ</h6>
+                <h6>นโยบายความเป็นส่วนตัว</h6>
+                <h6>แผนผังเว็บไซต์</h6>
+            </div>
+            <div class="col-sm-3">
+                <p><b>เกี่ยวกับเรา</b></p>
+                <h6>ข่าวสารและกิจกรรม</h6>
+                <h6>ติดต่อเรา</h6>
+                <img src="pho/ic-share-facebook.png" alt="">
+            </div>
+            <div class="col-sm-3">
+                <p><b>กลุ่มธุรกิจในเครือ</b></p>
+                <h6>Central</h6>
+                <h6>OfficeMate</h6>
+                <h6>B2S</h6>
+                <h6>Power Buy</h6>
+                <h6>Supersports</h6>
+                <h6>Tops</h6>
+                <h6>Hytexts</h6>
+            </div>
+        </div>
+    </div>
+    <!--ส่วน footer--->
+    <div style="display:table;" class="footer">
+        <div class="dropup show"
+            style="float:left;border-right: solid 1px #b8b8b8;padding-left: 10px;padding-right: 15px;;">
+            <button type="button" class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                style="border:none;background:#e6e6e6;">
+                <img style="width:24px;height:24px;"
+                    src="pho/ic-flag-th@2x.png">
+                <span style="font-family: notosansregular;font-size: 14px;">ไทย</span>
+                <img style="width:11px;height:11px;"
+                    src="pho/arrow-down@2x.png">
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><img style="width:24px;height:24px;"
+                        src="pho/ic-flag-th@2x.png">ไทย</a>
+                <a class="dropdown-item" href="#"><img style="width:24px;height:24px;"
+                        src="pho/ic-flag-en@2x.png">English</a>
+            </div>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:left">
+            <div style="display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" id="ic-mobile-home" width="24" height="24" viewBox="0 0 24 24">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #099357
+                            }
+
+                            .cls-2 {
+                                fill: none
+                            }
+                        </style>
+                    </defs>
+                    <path id="Path_1095"
+                        d="M21.962 3h-6.088A2.071 2.071 0 0 0 13.8 5.074v10.852A2.071 2.071 0 0 0 15.874 18h6.088a2.071 2.071 0 0 0 2.074-2.074V5.074A2.071 2.071 0 0 0 21.962 3zm-7.28 3.353h8.471v6.838h-8.471zm1.191-2.471h6.088a1.186 1.186 0 0 1 1.191 1.191v.4h-8.47v-.4a1.186 1.186 0 0 1 1.192-1.191zm6.088 13.235h-6.087a1.186 1.186 0 0 1-1.191-1.191v-1.852h8.471v1.853a1.186 1.186 0 0 1-1.192 1.191z"
+                        class="cls-1" data-name="Path 1095" transform="translate(-6.801 2)" />
+                    <path id="Rectangle_241" d="M0 0h24v24H0z" class="cls-2" data-name="Rectangle 241" />
+                </svg>
+            </div>
+            <svg style="width: 18px;height: 22px;margin-top: -8px;">
+                <use xlink:href="#ic-mobile-home" style="fill:#00bf6c;"></use>
+            </svg>
+            <a style="color:#00bf6c;" title="Download App" href="howTo.html">ดาวน์โหลดแอพ</a>
+        </div>
+        <div style="background-color:#00bf6c; font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#fff;" title="Contact Us" href="contract.html">ติดต่อเรา</a>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#00bf6c;" title="How to" href="howTo.html">วิธีการใช้งาน</a>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#00bf6c;" title="Register Publisher" href="book_regis.html">สมัครขายอีบุ๊ค</a>
+        </div>
+    </div>
+    <!--ส่วน footer--->
+</body>
+
+</html>

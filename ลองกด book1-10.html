@@ -1,0 +1,74 @@
+<style>
+    h1{
+        display:inline;
+    }
+    a{
+        cursor:pointer;
+    }
+</style>
+<html>
+<script type="text/javascript" src="CookieMonster.js"></script>
+<h1 style="cursor:pointer;" onclick="bookId(1)"><a href="bookdetail.html">BOOK1</a></h1><a onclick="addWish(1)"> wish</a><a onclick="addBasket(1)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(2)"><a href="bookdetail.html">BOOK2</a></h1><a onclick="addWish(2)"> wish</a><a onclick="addBasket(2)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(3)"><a href="bookdetail.html">BOOK3</a></h1><a onclick="addWish(3)"> wish</a><a onclick="addBasket(3)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(4)"><a href="bookdetail.html">BOOK4</a></h1><a onclick="addWish(4)"> wish</a><a onclick="addBasket(4)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(5)"><a href="bookdetail.html">BOOK5</a></h1><a onclick="addWish(5)"> wish</a><a onclick="addBasket(5)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(6)"><a href="bookdetail.html">BOOK6</a></h1><a onclick="addWish(6)"> wish</a><a onclick="addBasket(6)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(7)"><a href="bookdetail.html">BOOK7</a></h1><a onclick="addWish(7)"> wish</a><a onclick="addBasket(7)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(8)"><a href="bookdetail.html">BOOK8</a></h1><a onclick="addWish(8)"> wish</a><a onclick="addBasket(8)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(9)"><a href="bookdetail.html">BOOK9</a></h1><a onclick="addWish(9)"> wish</a><a onclick="addBasket(9)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="bookId(10)"><a href="bookdetail.html">BOOK10</a></h1><a onclick="addWish(10)"> wish</a><a onclick="addBasket(10)"> basket</a><br>
+<h1 style="cursor:pointer;" onclick="delAllWish()">Delete All Wish</h1><br>
+<h1 style="cursor:pointer;" onclick="delWish(1)">Delete Wish1</h1><br><br>
+<h1 style="cursor:pointer;" onclick="delAllBasket()">Delete All Basket</h1><br>
+<h1 style="cursor:pointer;" onclick="delBasket(1)">Delete Basket1</h1><br>
+<h1 style="cursor:pointer;" onclick="showBasket()">Show Basket</h1>
+<script>
+    //อยู่ใน CookieMonster.js แล้ว
+
+
+    //wish cookie check
+    /*if(cm_readCookie("wish") == null){
+        cookiemonster.set("wish",[]);
+    }
+
+    if(cm_readCookie("basket") == null){
+        cookiemonster.set("basket",[]);
+    }
+
+
+    //Function
+    function bookId(i){
+        cookiemonster.set("bookid", i);
+        location.href = "bookdetail.html";
+    }
+
+    function addWish(i){
+        cookiemonster.append("wish", i);
+    }
+
+    function addBasket(i){
+        cookiemonster.append("basket", i);
+    }
+
+    function delAllWish(){
+        cookiemonster.set("wish",[]);
+    }
+
+    function delWish(n){
+        cookiemonster.remove("wish", n);
+    }
+
+    function delAllBasket(){
+        cookiemonster.set("basket",[]);
+    }
+
+    function delBasket(n){
+        cookiemonster.remove("basket", n);
+    }*/
+    function showBasket(){
+        var arr = cookiemonster.get("basket");
+        alert(arr);
+    }
+</script>
+</html>

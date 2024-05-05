@@ -1,0 +1,1871 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"  href="pho/logo_meb.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="searcher.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="CookieMonster.js"></script>
+  <title>meb: e-book ร้านอีบุ๊กอันดับ 1 (หนังสือดี นิยายสนุก นิตยสารดัง ฟรีเพียบ)</title>
+  <style>
+    * {
+			font-family: 'Noto Sans Thai', sans-serif;
+      margin: 0;
+      padding: 0;
+
+    }
+    
+    body{
+      font-family: 'Noto Sans Thai', sans-serif;
+    }
+
+    .box_herader {
+      position: fixed;
+      width: 100%;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, #00af70, #37c13d);
+      height: 58px;
+      width: 100%;
+
+    }
+    .footer{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height:31;
+      width: 100%;
+      background-color: #e6e6e6;
+      color: white;
+      text-align: center;
+    }
+
+    .hide_menu {
+      background: #f6f6f6;
+      width: 100%;
+      text-align: center;
+	    overflow:hidden;
+      height:70px;
+      transition: height 0.3s ease;
+    }
+
+    .bottom_menu {
+      background: #f6f6f6;
+      width: 100%;
+      text-align: center;
+    }
+
+    .ul_row {
+      display: inline;
+      margin: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .ul_row:hover {
+    	border-bottom: 4px solid #00bf6c;
+    }
+    .ul_low {
+      display: inline;
+      margin: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .ul_low:hover {
+
+    }
+
+    .header_user {
+            position: relative;
+            margin-top: 0.8em;
+            margin-left: 2em;
+        }
+
+    .notification {
+      position: relative;
+      margin-top: 0.8em;
+      margin-left: 1em;
+      width: 30px;
+    }
+
+    .logo {
+      width: 59px;
+      display: inline-block;
+      margin-top: 12px;
+      margin-bottom: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    img {
+      vertical-align: middle;
+      border-style: none;
+
+    }
+
+    .swiper {
+      width: 100%;
+      height: 350px;
+      border: 2px solid black;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      align-items: center;
+      border: 2px solid black;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      text-align: center;
+      margin-top: -3em;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .head_text {
+      border-bottom: 1px solid black;
+    }
+
+    .book_list {
+      margin: 1em;
+
+    }
+
+    .book1 {
+      width: 188px;
+      text-align: center;
+    }
+
+    .col-xs-5ths,
+    .col-sm-5ths,
+    .col-md-5ths,
+    .col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+    .all_eb{
+    	border:none;
+      background:#f6f6f6;
+      font-size: 32px;
+    }
+
+		a{
+			text-decoration: none;
+		}
+    
+     .buy_button {
+      background-color: #00bf6c;
+      border: 1px solid #00bf6c;
+      width: 74px;
+      height: 31px;
+      font-family: Helvetica;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 3px;
+      float: right;
+    }
+
+    .info{
+      margin-left: 10px;
+    }
+    .dropbtn {
+  background-color: #f6f6f6;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 300px;
+  height: 450px;
+}
+.dropdown-content a {
+  text-align: left;
+  padding: 15px;
+  font-size: 14px;
+  color: black;
+  /* padding: 20px 80px; */
+  
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  font-size: 14px;
+  background-color: #f1f1f1;
+  /* padding: 20px 80px; */
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #f6f6f6;}
+
+    
+.wrap-text {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 15px;
+    background-color: #f6f6f6;
+    margin-bottom: 15px;
+}
+.header_search {
+            float: right;
+            margin-top: 13px;
+            margin-left: 20px;
+        }
+
+        .icon_search{
+            position:absolute;            
+            width: 24px;
+            top: 15px;
+        }
+    
+        .input_search{
+            float: left;
+            height: 32px;
+            border-radius: 5px;
+            border: none;
+            font-family: Thonburi,Tahoma,sans-serif!important;
+            font-size: 16px;
+            padding-left: 35px;
+            padding-right: 10px;
+        }
+    .but{
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+      background-color: #00bf6c;
+      min-width: 70px;
+      height: auto;
+      padding: 0.375rem 0.75rem;
+    }
+    .but:hover{
+      border: 1px solid #00bf6c;
+      border-radius: 20px;
+      color: #00bf6c;
+      font-size: 12px;
+      background-color: white;
+      min-width: 70px;
+      height: auto;
+      padding: 0.375rem 0.75rem;
+    }
+
+    .foot{
+      background-color: #f6f6f6;
+      padding: 3% 0 65px 0;
+      max-width: 1140px;
+      font-family: notosansregular;
+      text-align: left;
+      width: 100%;
+      margin: auto;
+    }
+    h6{
+      font-size: 14px;
+    }
+    .dropbtn {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropbtn2 {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropbtn3 {
+            background-color: #f6f6f6;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            transition: all 0s;
+
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 85;
+            left: 565;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: black;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+        .sub_dro {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            height: 50px;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+            top: -308;
+            left: 275;
+            z-index: 1;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content2 a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: #5a5a5a;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .dropdown-content2 a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .sub_dro:hover .dropdown-content2 {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .sub_dro:hover .dropbtn2 {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+        .sub_dro2 {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            height: 50px;
+            z-index: 100;
+            transition: all 0s;
+        }
+
+        .dropdown-content3 {
+            display: none;
+            position: relative;
+            background-color: white;
+            min-width: 100px;
+            box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.2);
+            top: -308;
+            left: 275;
+            z-index: 1;
+            width: 280px;
+            height: 460px;
+            transition: all 0s;
+        }
+
+        .dropdown-content3 a {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: #5a5a5a;
+            /* padding: 20px 80px; */
+            transition: all 0s;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .dropdown-content3 a:hover {
+            font-size: 14px;
+            background-color: #f1f1f1;
+            /* padding: 20px 80px; */
+        }
+
+        .sub_dro2:hover .dropdown-content3 {
+            display: block;
+            transition-delay: 1s;
+        }
+
+        .sub_dro2:hover .dropbtn3 {
+            background-color: #f6f6f6;
+            transition-delay: 1s;
+        }
+
+        .fot {
+                    font-weight:500;
+                    color: #5a5a5a;
+                    background-color: #f6f6f6;
+        }
+        .cole {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 14px;
+        }
+
+        .cole-b {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #021a24;
+        }
+
+        .box_basket {
+            max-width: 768;
+
+            margin-top: 8em;
+        }
+
+        .buy_book {
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+
+        .del_book {
+            height: 25px;
+            border: 1px solid black;
+            margin-top: 1.5em;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 5px;
+            position: relative;
+        }
+
+        .info_buy_book {
+            margin: 0.5em;
+            line-height: 0.5;
+            margin-right: 1.5em;
+        }
+
+        .no_books {
+            margin-top: 2em;
+            color: #d01818;
+            text-align: center;
+
+        }
+
+        .next_books {
+            margin-top: 2em;
+            text-align: center;
+            color: #00bf6c;
+        }
+
+        .pay_books {
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+        .button_buy {
+            background: #00bf6c;
+            border: 1px solid #00bf6c;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 40px;
+            padding: 7px;
+            width: 260px;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+
+        .swiper-pagination-bullet-active {
+            background-color: #00bf6c;
+        }
+        .book {
+            width: 192px;
+            border: 1px solid black;
+            padding-bottom: 10px;
+        }
+
+
+        .campaing_banner {
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
+        }
+
+        .col-xs-5ths,
+        .col-sm-5ths,
+        .col-md-5ths,
+        .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        input[type="text"]:focus::placeholder {
+            color: #00bf6c;
+        }
+
+        .btn-success {
+            height: 32px;
+            padding: 5px;
+        }
+
+        .btn.btn-secondary.btn-lg.active:focus {
+            outline: 5px auto black;
+        }
+
+        .signout_btn {
+            background: #fff;
+            color: #d01818;
+            border: 1px solid #d01818;
+            border-radius: 20px;
+            width: 100px;
+            font-size: 12px;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .signout_btn:hover {
+            background: #d01818;
+            color: #fff;
+        }
+
+
+        .category {
+            border-radius: 5px;
+            color: white;
+            margin-top: 1em;
+            margin-left: 0.5em;
+        }
+
+        .text_top_hit {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .glyphicon-camera {
+            color: #666;
+            background: #e6e6e6;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            position: absolute;
+            left: 55;
+            top: 55;
+            /*top: unset;*/
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .nav-link:hover {
+            color: black;
+        }
+
+        .how_to_content{
+            width: 670px;
+        }
+
+        .showHowInfo{
+            display: block;
+        }
+
+        .howToInfo{
+            font-size:14px;
+        }
+
+        .count_cart {
+            display: none;
+            position: absolute;
+            background: #e0166a;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            right: -8px;
+            color: #fff;
+            left: 85%;
+            top: -8px;
+        }
+
+        .cart{
+            position: relative;
+            left: 10px;
+            top: 12px;
+        }
+        .dropdown-item {
+        padding: 0px;
+        }
+        .add_coin {
+            float: right;
+        }
+        #userdropdownlist {
+            margin-bottom: 5px;
+            height: 21;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+        #userdropdownlist:hover {
+            color: #00bf6c;
+            text-decoration: underline;
+        }
+  </style>
+
+
+</head>
+
+
+
+
+<body>
+    <div id="idtest" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div onclick="closeWithX()" class="close"><img
+                    src="pho/ic-close.png?1402">
+            </div>
+            <div class="box_ab">
+                <p>เพิ่มหนังสือลงตะกร้าแล้ว</p>
+                <button class="button_add">เลือกดูหนังสือเล่มอื่นต่อ</button>
+                <div style="border-bottom:  1px solid black; padding-bottom: 1em;">
+                    <button class="button_buy">ชำระเงิน</button>
+                </div>
+                <button class="botton_meb_coin">ชำระเงินด้วย <img
+                        src="pho/icon_coin.png"> meb coin</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="box_header sticky" id="box_header">
+        <div class="header">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="top_bar_left">
+                        <div class="row">
+                            <div class="header_user">
+                                <button
+                                    style="font-size: 14px;cursor: pointer;background-color: rgba(0,0,0,.12);border: none;padding: 0 15px;height: 32px;"
+                                    class="btn btn-secondary btn-lg active" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div>
+                                        สวัสดี User
+                                        <div style="width:295px;padding:15px;" class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton">
+                                            <div>
+                                                <div style="margin-bottom:5px;float:left;">
+                                                    <img style="width: 68px;height: 68px;border-radius:50%;"
+                                                        src="pho/avatar50x50.png">
+                                                    <img src="pho/glyphicons-basic-12-camera@2x.png"
+                                                        class="glyphicon-camera" style="cursor: pointer;">
+                                                </div>
+                                                <div style="padding-left:10px;float:left;">
+                                                    <h1
+                                                        style="font-weight: 700;font-size: 18px;height: 27px;overflow: hidden; width: 100%">
+                                                        TestingAccount</h1>
+                                                    <p1
+                                                        style="color: #7e7e7e;font-size: 14px;height: 21px;width: 			100%;">
+                                                        User</p1><br>
+                                                </div>
+                                                <div style="float:right;">
+                                                    <div class="signout_btn">ออกจากระบบ</div>
+                                                </div>
+                                            </div>
+                                            <div style="margin-top:89px;" class="dropdown-divider"></div>
+                                            <div>
+                                                <div style="font-size:14px" class="dropdown-item user">meb coin
+                                                    <span style="width: 18px;margin-top: -5px;margin-left: 3px;">
+                                                        <img src="pho/icon_coin.png"
+                                                            title="Icon Coin">
+                                                    </span>
+                                                    <span style="color: #f58b1b;margin-left: 3px;">0.00
+                                                    </span>
+                                                    <span class="add_coin" title="coin">
+                                                        เติม coin
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a id="userdropdownlist" class="dropdown-item list">รายการที่อยากได้</a>
+                                            <a id="userdropdownlist" class="dropdown-item list">รายการที่ติดตาม</a>
+                                            <a id="userdropdownlist" class="dropdown-item list">Gift Code</a>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a id="userdropdownlist" class="dropdown-item list">จัดการบัญชี</a>
+                                            <div style="margin-bottom:11px;" class="dropdown-divider"></div>
+                                            <a style="font-size:14px;cursor:default;"
+                                                class="dropdown-item list">ข้อมูลของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">สถานะสมาชิก</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">บุฟเฟต์ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">อุปกรณ์ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">สิทธิพิเศษของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">meb
+                                                stamp ของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">ประวัติการสั่งซื้อของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">ชั้นหนังสือของฉัน</a>
+                                            <a id="userdropdownlist" style="margin-top:5px;padding-left:15px;"
+                                                class="dropdown-item list">รีวิวของฉัน</a>
+                                        </div>
+                                        <img
+                                            src="pho/arrow-drop-down-white.png">
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="notification">
+                                <img src="pho/ic-noti-white.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <a href="index.html"><img class="logo" src="pho/logo_store@2x.png?1407"></a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <div class="top_bar_right row">
+
+                        <a href="wishlist.html"><div style="position: relative; margin-top: 0.8em; margin-left: 1em;">
+                            <button class="btn btn-success" id="wish">
+                                <img src="pho/ic-wishlist-2-30px.png"
+                                    width="24px">
+                            </button>
+                        </div></a>
+
+                        <div class="cart" id="cart">
+                            <div class="count_cart" id="count_cart"></div>
+                            <a href="basket.html">
+                                <button class="btn btn-success">
+                                    <img id="img_cart" src="pho/ic-cart-white.png"
+                                        width="24px">
+                                    ตะกร้า
+                                </button></a>
+                        </div>
+                        <div class="header_search">
+                            <form method="post" id="search_main_header" action="" style="float:right;">
+                                <input type="image" class="icon_search"
+                                    src="pho/ic-search-grey@2x.png">
+                                <input type="text" class="input_search" name="search" placeholder="ค้นหาหนังสือ"
+                                    maxlength="100" autocomplete="off">
+                            </form>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="bottom_menu">
+      <ul>
+        <div class="dropdown">
+          <button class="dropbtn"><li class="ul_low"><a style="text-decoration:none;color:black;">อีบุ๊กทั้งหมด</a>
+            <img src="pho/arrow-down.png"></li>
+          </button>
+
+          <div class="dropdown-content" style="position: fixed;padding-left: 5;padding-right: 5;">
+                    <a href="#" title="Ebook Store"
+                        style="border-bottom: 1px solid grey;"><span style="color: #5a5a5a;">อีบุ๊กทั้งหมด</span></a>
+                    <a href="#" title="Fiction Store">นิยายทั้งหมด</a>
+                    <a href="#" title="Fiction Store">นิยายแปล</a>
+                    <a href="#" title="Cartoon Store">การ์ตูนทั้งหมด</a>
+                    <a href="#" title="Other Store">อีบุ๊กทั่วไป</a>
+                    <div class="sub_dro" style="padding-right: 10;">
+                        <a href="#" title="Audio Store"
+                            style="border-bottom: 1px solid grey;">หนังสือเสียง<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+
+                        <div class="dropdown-content2">
+                            <a href="#" title="Cartoon Store">นิยาย</a>
+                            <a href="#" title="Other Store">ทั่วไป</a>
+                        </div>
+                    </div>
+                    <div class="sub_dro" style="padding-right: 10;">
+                        <a href="#" title="Buffet Store"
+                            style="color: #5a5a5a;">บุฟเฟต์<img src="pho/arrow-right.png" style="width: 20px;float: right;overflow: scroll;" ></a>
+                        <div class="dropdown-content2" style="top: -357;left: 275;overflow: scroll;">
+                            <a href="#" title="Cartoon Store" style="color: black;">ทั้งหมด</a>
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">การ์ตูน<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">การ์ตูนทั้งหมด</a>
+                                    <a href="#" title="Other Store">การ์ตูน Boy Love / Yaoi</a>
+                                    <a href="#" title="Other Store">การ์ตูนเด็ก/การ์ตูนความรู้</a>
+                                    <a href="#" title="Other Store">การ์ตูนทั่วไป</a>
+                                    <a href="#" title="Other Store">การ์ตูนรายตอน</a>
+                                </div>
+                            </div>
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">นิตยสาร<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">นิตยสารทั้งหมด</a>
+                                    <a href="#" title="Other Store">นิตยสาร Lifestyle</a>
+                                    <a href="#" title="Other Store">นิตยสาร Metro Lifestyle</a>
+                                    <a href="#" title="Other Store">นิตยสารการเงินการลงทุน</a>
+                                    <a href="#" title="Other Store">นิตยสารกีฬา</a>
+                                    <a href="#" title="Other Store">นิตยสารข่าว</a>
+                                    <a href="#" title="Other Store">นิตยสารความรู้</a>
+                                    <a href="#" title="Other Store">นิตยสารคอมพิวเตอรฺ์</a>
+                                    <a href="#" title="Other Store">นิตยสารชี้ช่องทำกิน</a>
+                                    <a href="#" title="Other Store">นิตยสารชีวิตคู่เเละครอบครัว</a>
+                                    <a href="#" title="Other Store">นิตยสารดนตรี</a>
+                                    <a href="#" title="Other Store">นิตยสารดาราเเละบันเทิง</a>
+                                    <a href="#" title="Other Store">นิตยสารท่องเที่ยว</a>
+                                    <a href="#" title="Other Store">นิตยสารบริหารธุรกิจ</a>
+                                    <a href="#" title="Other Store">นิตยสารบ้านเเละที่อยู่อาศัย</a>
+                                    <a href="#" title="Other Store">นิตยสารผู้ชาย</a>
+                                    <a href="#" title="Other Store">นิตยสารพระ/ดวง/โหราศาสตร์/เรื่องเหนือธรรมชาติ</a>
+                                    <a href="#" title="Other Store">นิตยสารแฟชั่นเเละความสวยงาม</a>
+                                    <a href="#" title="Other Store">นิตยสารไฟฟ้าเเละอิเล็กทรอนิกส์</a>
+                                    <a href="#" title="Other Store">นิตยสารภาษา</a>
+                                    <a href="#" title="Other Store">นิตยสารรถยนตร์</a>
+                                    <a href="#" title="Other Store">นิตยสารวัยรุ่น</a>
+                                    <a href="#" title="Other Store">นิตยสารศิลปะ/ภาพถ่าย/การออกเเบบ</a>
+                                    <a href="#" title="Other Store">นิตยสารสังคมเเละชุมชน</a>
+                                    <a href="#" title="Other Store">นิตยสารสาระบันเทิง</a>
+                                    <a href="#" title="Other Store">นิตยสารสุขภาพเเละอาหาร</a>
+                                    <a href="#" title="Other Store">นิตยสารอุตสาหกรรม</a>
+                                    <a href="#" title="Other Store"></a>
+                                </div>
+                            </div>
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">นิยาย/วรรณกรรม<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">นิยายทั้งหมด</a>
+                                    <a href="#" title="Other Store">Fan Fiction แฟนฟิคชั่น</a>
+                                    <a href="#" title="Other Store">นิยาย Girl Love/Yuri</a>
+                                    <a href="#" title="Other Store">นิยายกำลังภายใน</a>
+                                    <a href="#" title="Other Store">นิยายชีวิต/ดรามา</a>
+                                    <a href="#" title="Other Store">นิยายไซไฟ</a>
+                                    <a href="#" title="Other Store">นิยายตลก</a>
+                                    <a href="#" title="Other Store">นิยายผจญภัย/บู๊แอกชัน</a>
+                                    <a href="#" title="Other Store">นิยายแฟนตาซี</a>
+                                    <a href="#" title="Other Store">นิยายรัก</a>
+                                    <a href="#" title="Other Store">นิยายรักจีนโบราณ</a>
+                                    <a href="#" title="Other Store">นิยายรักวัยรุ่น</a>
+                                    <a href="#" title="Other Store">นิยายรักสำหรับผู้ใหญ่</a>
+                                    <a href="#" title="Other Store">นิยายโรมานซ์</a>
+                                    <a href="#" title="Other Store">นิยายลึกลับ/เขย่าขวัญ</a>
+                                    <a href="#" title="Other Store">นิยายวาย Boy Love/Yaoi</a>
+                                    <a href="#" title="Other Store">นิยายสืบสวนสอบสวน/ทริลเลอร์</a>
+                                    <a href="#" title="Other Store">นิยายเสียดสีสังคม</a>
+                                    <a href="#" title="Other Store">พาราเนอร์มอล โรมานซ์</a>
+                                    <a href="#" title="Other Store">รวมเรื่องสั้น</a>
+                                    <a href="#" title="Other Store">ไลท์โนเวล</a>
+                                    <a href="#" title="Other Store">วรรณกรรมคลาสสิก/วรรณคดีไทย</a>
+                                    <a href="#" title="Other Store">วรรณกรรมทั่วไป</a>
+                                    <a href="#" title="Other Store">วรรณกรรมเยาวชน</a>
+                                    <a href="#" title="Other Store"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">หนังสือพิมพ์<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store">PAKTAI FOCUS</a>
+                                    <a href="#" title="Other Store">Pattaya Mail</a>
+                                    <a href="#" title="Other Store">Transport Journal</a>
+                                    <a href="#" title="Other Store">ข่าวสด</a>
+                                    <a href="#" title="Other Store">ข่าวหุ้น</a>
+                                    <a href="#" title="Other Store">ประชาชาติธุรกิจ</a>
+                                    <a href="#" title="Other Store">โพสต์ทูเดย์</a>
+                                    <a href="#" title="Other Store">มติชน</a>
+                                </div>
+                            </div>
+
+                            <a href="#" title="Other Store">Foreign books</a>
+                            <a href="#" title="Other Store">กฎหมาย</a>
+                            <a href="#" title="Other Store">การเงินการลงทุน</a>
+                            <a href="#" title="Other Store">การตลาดเเละการบัญชี</a>
+                            <a href="#" title="Other Store">การบริหารงานบุคคล</a>
+                            <a href="#" title="Other Store">การประกอบอาหาร</a>
+                            <a href="#" title="Other Store">การเมือง/รัฐศาสตร์</a>
+                            <a href="#" title="Other Store">การศึกษา/ตำราเรียน</a>
+                            <a href="#" title="Other Store">การออกเเบบเเละสร้างสรรค์</a>
+                            <a href="#" title="Other Store">ความเชื่อเเละศาสนา/พระเครื่อง</a>
+                            <a href="#" title="Other Store">ความรู้ทั่วไป</a>
+                            <a href="#" title="Other Store">ความรู้สึกดีๆ(Feel Good)</a>
+                            <a href="#" title="Other Store">ความรู้เสริมสำหรับเด็กเเละเยาวชน</a>
+                            <a href="#" title="Other Store">คอมพิวเตอร์</a>
+                            <a href="#" title="Other Store">จิตวิทยา</a>
+                            <a href="#" title="Other Store">ชีวประวัติ</a>
+                            <a href="#" title="Other Store">ดนตรีเเละบันเทิง</a>
+                            <a href="#" title="Other Store">ดวงพยากรณ์/ฮวงจุ้ย/โหราศาสตร์</a>
+                            <a href="#" title="Other Store">ท่องเที่ยว</a>
+                            <a href="#" title="Other Store">เกิดพระเกียรติ</a>
+                            <a href="#" title="Other Store">ธรรมะ/ปรัชญา</a>
+                            <a href="#" title="Other Store">บทกวี/กลอน</a>
+                            <a href="#" title="Other Store">บริหารจัดการ</a>
+                            <a href="#" title="Other Store">บ้านเเละที่อยู่อาศัย</a>
+                            <a href="#" title="Other Store">ประวัติศาสตร์</a>
+                            <a href="#" title="Other Store">พจนานุกรม/ปทานุกรม/สารานุกรม</a>
+                            <a href="#" title="Other Store">พัฒนาตนเอง</a>
+                            <a href="#" title="Other Store">ภาษา</a>
+                            <a href="#" title="Other Store">เเม่เเละเด็ก</a>
+                            <a href="#" title="Other Store">วิทยาศาสตร์เเละเทคโนโลยี</a>
+                            <a href="#" title="Other Store">ศิลปะเเละภาพถ่าย</a>
+                            <a href="#" title="Other Store">เศรษฐศาสตร์เเละธุรกิจ</a>
+                            <a href="#" title="Other Store">สังคมเเละชุมชน</a>
+                            <a href="#" title="Other Store">สัตว์เลี้ยง</a>
+                            <a href="#" title="Other Store">สารคดี</a>
+                            <a href="#" title="Other Store">สาระบันเทิง</a>
+                            <a href="#" title="Other Store">สุขภาพ</a>
+                            <a href="#" title="Other Store">หนังสือ/นิทานภาพสำหรับเด็ก</a>
+                            <a href="#" title="Other Store">หนังสือรุ่น/ไดเรกทอรี</a>
+                            <a href="#" title="Other Store">อาชีพเเละชี้ช่องทำกิน</a>
+                            <a href="#" title="Other Store"></a>
+                        </div>
+                    </div>
+
+                    <div class="sub_dro" style="padding-right: 10;">
+                        <a href="#" title="Category"
+                            style="color: #5a5a5a;">หมวดหมู่ทั้งหมด<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                        <div class="dropdown-content2" style="top: -408;left: 275;overflow: scroll;">
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">การ์ตูน<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">การ์ตูนทั้งหมด</a>
+                                    <a href="#" title="Other Store">การ์ตูน Boy Love / Yaoi</a>
+                                    <a href="#" title="Other Store">การ์ตูนเด็ก/การ์ตูนความรู้</a>
+                                    <a href="#" title="Other Store">การ์ตูนทั่วไป</a>
+                                    <a href="#" title="Other Store">การ์ตูนรายตอน</a>
+                                </div>
+                            </div>
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">นิตยสาร<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">นิตยสารทั้งหมด</a>
+                                    <a href="#" title="Other Store">นิตยสาร Lifestyle</a>
+                                    <a href="#" title="Other Store">นิตยสาร Metro Lifestyle</a>
+                                    <a href="#" title="Other Store">นิตยสารการเงินการลงทุน</a>
+                                    <a href="#" title="Other Store">นิตยสารกีฬา</a>
+                                    <a href="#" title="Other Store">นิตยสารข่าว</a>
+                                    <a href="#" title="Other Store">นิตยสารความรู้</a>
+                                    <a href="#" title="Other Store">นิตยสารคอมพิวเตอรฺ์</a>
+                                    <a href="#" title="Other Store">นิตยสารชี้ช่องทำกิน</a>
+                                    <a href="#" title="Other Store">นิตยสารชีวิตคู่เเละครอบครัว</a>
+                                    <a href="#" title="Other Store">นิตยสารดนตรี</a>
+                                    <a href="#" title="Other Store">นิตยสารดาราเเละบันเทิง</a>
+                                    <a href="#" title="Other Store">นิตยสารท่องเที่ยว</a>
+                                    <a href="#" title="Other Store">นิตยสารบริหารธุรกิจ</a>
+                                    <a href="#" title="Other Store">นิตยสารบ้านเเละที่อยู่อาศัย</a>
+                                    <a href="#" title="Other Store">นิตยสารผู้ชาย</a>
+                                    <a href="#" title="Other Store">นิตยสารพระ/ดวง/โหราศาสตร์/เรื่องเหนือธรรมชาติ</a>
+                                    <a href="#" title="Other Store">นิตยสารแฟชั่นเเละความสวยงาม</a>
+                                    <a href="#" title="Other Store">นิตยสารไฟฟ้าเเละอิเล็กทรอนิกส์</a>
+                                    <a href="#" title="Other Store">นิตยสารภาษา</a>
+                                    <a href="#" title="Other Store">นิตยสารรถยนตร์</a>
+                                    <a href="#" title="Other Store">นิตยสารวัยรุ่น</a>
+                                    <a href="#" title="Other Store">นิตยสารศิลปะ/ภาพถ่าย/การออกเเบบ</a>
+                                    <a href="#" title="Other Store">นิตยสารสังคมเเละชุมชน</a>
+                                    <a href="#" title="Other Store">นิตยสารสาระบันเทิง</a>
+                                    <a href="#" title="Other Store">นิตยสารสุขภาพเเละอาหาร</a>
+                                    <a href="#" title="Other Store">นิตยสารอุตสาหกรรม</a>
+                                    <a href="#" title="Other Store"></a>
+                                </div>
+                            </div>
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">นิยาย/วรรณกรรม<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store" style="color: black;">นิยายทั้งหมด</a>
+                                    <a href="#" title="Other Store">Fan Fiction แฟนฟิคชั่น</a>
+                                    <a href="#" title="Other Store">นิยาย Girl Love/Yuri</a>
+                                    <a href="#" title="Other Store">นิยายกำลังภายใน</a>
+                                    <a href="#" title="Other Store">นิยายชีวิต/ดรามา</a>
+                                    <a href="#" title="Other Store">นิยายไซไฟ</a>
+                                    <a href="#" title="Other Store">นิยายตลก</a>
+                                    <a href="#" title="Other Store">นิยายผจญภัย/บู๊แอกชัน</a>
+                                    <a href="#" title="Other Store">นิยายแฟนตาซี</a>
+                                    <a href="#" title="Other Store">นิยายรัก</a>
+                                    <a href="#" title="Other Store">นิยายรักจีนโบราณ</a>
+                                    <a href="#" title="Other Store">นิยายรักวัยรุ่น</a>
+                                    <a href="#" title="Other Store">นิยายรักสำหรับผู้ใหญ่</a>
+                                    <a href="#" title="Other Store">นิยายโรมานซ์</a>
+                                    <a href="#" title="Other Store">นิยายลึกลับ/เขย่าขวัญ</a>
+                                    <a href="#" title="Other Store">นิยายวาย Boy Love/Yaoi</a>
+                                    <a href="#" title="Other Store">นิยายสืบสวนสอบสวน/ทริลเลอร์</a>
+                                    <a href="#" title="Other Store">นิยายเสียดสีสังคม</a>
+                                    <a href="#" title="Other Store">พาราเนอร์มอล โรมานซ์</a>
+                                    <a href="#" title="Other Store">รวมเรื่องสั้น</a>
+                                    <a href="#" title="Other Store">ไลท์โนเวล</a>
+                                    <a href="#" title="Other Store">วรรณกรรมคลาสสิก/วรรณคดีไทย</a>
+                                    <a href="#" title="Other Store">วรรณกรรมทั่วไป</a>
+                                    <a href="#" title="Other Store">วรรณกรรมเยาวชน</a>
+                                    <a href="#" title="Other Store"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="sub_dro2" style="padding-right: 10;">
+                                <a href="#"
+                                    title="Other Store">หนังสือพิมพ์<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                                <div class="dropdown-content3"
+                                    style="top: 85;left: 1125;overflow: scroll;position: fixed;">
+                                    <a href="#" title="Other Store">Bangkok Post</a>
+                                    <a href="#" title="Other Store">BLT Bangkok</a>
+                                    <a href="#" title="Other Store">PAKTAI FOCUS</a>
+                                    <a href="#" title="Other Store">Pattaya Mail</a>
+                                    <a href="#" title="Other Store">Transport Journal</a>
+                                    <a href="#" title="Other Store">กรุงเทพธุรกิจ</a>
+                                    <a href="#" title="Other Store">ข่าวสด</a>
+                                    <a href="#" title="Other Store">ข่าวหุ้น</a>
+                                    <a href="#" title="Other Store">คมชัดลึก</a>
+                                    <a href="#" title="Other Store">จันทรเกษมโพสต์</a>
+                                    <a href="#" title="Other Store">ประชาชาติธุรกิจ</a>
+                                    <a href="#" title="Other Store">มติชน</a>
+                                    <a href="#" title="Other Store">สยามอินชัวร์ นิวส์</a>
+                                    <a href="#" title="Other Store">โพสต์ทูเดย์</a>
+                                    <a href="#" title="Other Store"></a>
+                                </div>
+                            </div>
+
+                            <a href="#" title="Other Store">Foreign books</a>
+                            <a href="#" title="Other Store">กฎหมาย</a>
+                            <a href="#" title="Other Store">การเงินการลงทุน</a>
+                            <a href="#" title="Other Store">การตลาดเเละการบัญชี</a>
+                            <a href="#" title="Other Store">การบริหารงานบุคคล</a>
+                            <a href="#" title="Other Store">การประกอบอาหาร</a>
+                            <a href="#" title="Other Store">การเมือง/รัฐศาสตร์</a>
+                            <a href="#" title="Other Store">การศึกษา/ตำราเรียน</a>
+                            <a href="#" title="Other Store">การออกเเบบเเละสร้างสรรค์</a>
+                            <a href="#" title="Other Store">ความเชื่อเเละศาสนา/พระเครื่อง</a>
+                            <a href="#" title="Other Store">ความรู้ทั่วไป</a>
+                            <a href="#" title="Other Store">ความรู้สึกดีๆ(Feel Good)</a>
+                            <a href="#" title="Other Store">ความรู้เสริมสำหรับเด็กเเละเยาวชน</a>
+                            <a href="#" title="Other Store">คอมพิวเตอร์</a>
+                            <a href="#" title="Other Store">จิตวิทยา</a>
+                            <a href="#" title="Other Store">ชีวประวัติ</a>
+                            <a href="#" title="Other Store">ดนตรีเเละบันเทิง</a>
+                            <a href="#" title="Other Store">ดวงพยากรณ์/ฮวงจุ้ย/โหราศาสตร์</a>
+                            <a href="#" title="Other Store">ท่องเที่ยว</a>
+                            <a href="#" title="Other Store">เกิดพระเกียรติ</a>
+                            <a href="#" title="Other Store">ธรรมะ/ปรัชญา</a>
+                            <a href="#" title="Other Store">บทกวี/กลอน</a>
+                            <a href="#" title="Other Store">บริหารจัดการ</a>
+                            <a href="#" title="Other Store">บ้านเเละที่อยู่อาศัย</a>
+                            <a href="#" title="Other Store">ประวัติศาสตร์</a>
+                            <a href="#" title="Other Store">พจนานุกรม/ปทานุกรม/สารานุกรม</a>
+                            <a href="#" title="Other Store">พัฒนาตนเอง</a>
+                            <a href="#" title="Other Store">ภาษา</a>
+                            <a href="#" title="Other Store">เเม่เเละเด็ก</a>
+                            <a href="#" title="Other Store">วิทยาศาสตร์เเละเทคโนโลยี</a>
+                            <a href="#" title="Other Store">ศิลปะเเละภาพถ่าย</a>
+                            <a href="#" title="Other Store">เศรษฐศาสตร์เเละธุรกิจ</a>
+                            <a href="#" title="Other Store">สังคมเเละชุมชน</a>
+                            <a href="#" title="Other Store">สัตว์เลี้ยง</a>
+                            <a href="#" title="Other Store">สารคดี</a>
+                            <a href="#" title="Other Store">สาระบันเทิง</a>
+                            <a href="#" title="Other Store">สุขภาพ</a>
+                            <a href="#" title="Other Store">หนังสือ/นิทานภาพสำหรับเด็ก</a>
+                            <a href="#" title="Other Store">หนังสือรุ่น/ไดเรกทอรี</a>
+                            <a href="#" title="Other Store">อาชีพเเละชี้ช่องทำกิน</a>
+                            <a href="#" title="Other Store">อื่นๆ</a>
+
+                        </div>
+                    </div>
+                    <div class="sub_dro" style="padding-right: 10;">
+                        <a href="#" title="Publisher"
+                            style="color: #5a5a5a;">สำนักพิมพ์<img src="pho/arrow-right.png" style="width: 20px;float: right;" ></a>
+                        <div class="dropdown-content2" style="top: -457;left: 275;overflow: scroll;">
+                             <div class="header_search">
+                            <form method="post" id="search_main_header" action="" style="float:right;">
+                                <img class="icon_search" id="iconSearch"
+                                    src="pho/ic-search-grey@2x.png" onclick="searchClicked();">
+                                <script>function searchClicked(){search(document.getElementById("myInput").value);}</script>
+                                <div class="autocomplete">
+                                    <input type="text" class="input_search" name="search" placeholder="ค้นหาหนังสือ"
+                                        maxlength="100" autocomplete="off" id="myInput">
+                                </div>
+                            </form>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <li class="ul_row"><a style="text-decoration:none;color:black;">หน้าแรก</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">ขายดี</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">มาใหม่</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">โปรโมชัน</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">ฟรีกระจาย</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">ฮิตขึ้นหิ้ง</a></li>
+        <li class="ul_row"><a style="text-decoration:none;color:black;">แนะนำ</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="check_count.js"></script>
+  
+  <br><br><br><br><br>
+  
+  <div class="container how_to_content my-4">
+    <h1 class="text-center" style="font-size:32px;font-weight:bold;">วิธีการใช้งาน</h1>
+    <br>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#buy" role="tab"
+                aria-selected="true">How to Buy</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#read" role="tab" aria-selected="false">How
+                to Read</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#sell" role="tab" aria-selected="false">How
+                to Sell</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane active show" id="buy" role="tabpanel" aria-labelledby="home-tab">
+            <br>
+            <h4>How to buy e-book</h4>
+            <br>
+            <p>เรามีความตั้งใจว่าระบบ e-book ที่ดีนั้นไม่ควรมีดีแค่อ่านสะดวกเพียงอย่างเดียว
+                แต่จะต้องสามารถหาซื้อหนังสือมาอ่านได้ง่ายๆอีกด้วย ดังนั้นเพื่อความสะดวกแก่นักอ่านในการซื้อ e-book
+                ทางเราได้จัดเตรียมช่องทางการสั่งซื้อและชำระเงินไว้อย่างหลากหลาย ท่านสามารถเลือกรายการ e-book
+                ที่ต้องการ และสั่งซื้อบนอุปกรณ์ต่างๆ ทั้ง iPad / iPhone / Android / Windows / Mac ได้อย่างสะดวก
+                โดยการสั่งซื้อ e-book มีวิธีการง่ายๆ ดังนี้จ้า</p>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('howToBuyInfo')">
+                วิธีการสั่งซื้อหนังสือ <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="howToBuyInfo" style="display:none;background-color:#f6f6f6;">
+                <div>
+                    <p>1. กดเลือกหนังสือที่ต้องการ</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_1.jpeg" style="max-width:600px;" width="100%">
+                </div>
+                <div>
+                    <p>2. กดปุ่ม "ซื้อ"</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_2.jpeg" style="max-width:600px;" width="100%">
+                </div>
+                <div>
+                    <p>3. กดปุ่ม "ชำระเงิน"</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_3.jpeg" style="max-width:600px;" width="100%">
+                </div>
+                <div>
+                    <p>4. ตรวจสอบสรุปรายชื่อหนังสือที่ต้องการซื้อ แล้วกดปุ่ม "ชำระเงิน"</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_4.jpeg" style="max-width:600px;" width="100%">
+                </div>
+                <div>
+                    <p>5. หากยังไม่ได้ล็อกอินเข้าระบบ จะต้องล็อกอินก่อน (หากล็อกอินแล้ว ให้ข้ามไปข้อถัดไป)</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_5.jpeg" style="max-width:600px;" width="100%">
+                </div>
+                <div>
+                    <p>6. เลือกช่องทางการชำระเงินที่ต้องการ</p>
+                </div>
+                <div>
+                    <p>7. กดปุ่ม "ชำระเงิน" และดำเนินการตามขั้นตอนจนชำระเงินสำเร็จ</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how_to_buy_web_6.jpeg" style="max-width:600px;" width="100%">
+                </div>
+            </div>
+            <hr>
+            <br><br>
+            <h4>How to pay for e-book</h4>
+            <br>
+            <p>นักอ่านสามารถเลือกซื้อ e-book ที่ถูกใจได้ผ่านรูปแบบการชำระเงินที่หลากหลาย ไม่ว่าจะชำระผ่านบัตรเครดิต,
+                ผ่านช่องทาง PAYSBUY , PayPal หรือหากท่านไม่มีบัตรเครดิต ก็สามารถชำระด้วยเงินสดผ่านระบบ
+                เคาน์เตอร์เซอร์วิส 7-11 / Tesco Lotus / JustPay / MPay / Big C / Pay@Post ใกล้ๆบ้านท่าน
+                หรือถ้าไม่สะดวกออกไปจ่าย ท่านสามารถชำระได้ด้วยการโอนเงินผ่าน ATM / Internet Banking
+                เรียกว่าสะดวกแบบไหนจ่ายแบบนั้นกันเลยทีเดียว โดยมีขั้นตอนการชำระเงิน ดังนี้จ้า</p>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithAppleInfo')">
+                ชำระด้วย <a style="color:#00bf6c;">Apple ID</a> ผ่านอุปกรณ์ iOS <img src="pho/how_to/applexcopy.png" border="0" style="height: 25px;vertical-align: middle;"><a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+                <div class="p-4 howToInfo" id="buyWithAppleInfo" style="display:none;background-color:#f6f6f6;">
+                    <p>
+                        <strong>ชำระด้วยบัตรเครดิตผ่านช่องทาง Apple ID</strong> (สำหรับการสั่งซื้อบน อุปกรณ์ iOS)<br><br>
+&ensp;
+สำหรับนักอ่านที่ใช้งานแอปพลิเคชัน meb บน iPad หรือ iPhone สามารถซื้อ e-book ได้ง่ายๆ โดยชำระเงินผ่านทางระบบ In-App Purchase ของ Apple ซึ่งจะทำการตัดเงินอัตโนมัติผ่านทางบัญชีบัตรเครดิตที่ใช้ผูกกับ Apple ID รูปแบบนี้จะคล้ายกับการซื้อแอปพลิเคชันผ่านทางApple App Store คือเราเพียงแค่กรอก password ของ Apple ID เท่านั้น ระบบของ Apple จะทำการตัดเงินจากบัญชีธนาคารของ Apple ID นั้นๆ โดยที่ไม่ต้องกรอกเลขบัตรเครดิตให้ยุ่งยากเลย หลังจากนั้น e-book ที่ซื้อก็จะไปปรากฏใน My Shelf และสามารถอ่านได้ทันที และหากต้องการชำระเงินในช่องทางอื่นๆ สามารถทำได้โดยทำรายการผ่านทางเว็บไซต์ mebmarket.com เท่านั้นจ้า<br><br>
+&ensp;
+ทั้งนี้ราคาหนังสือผ่านระบบ In-App Purchase กับราคาบนช่องทางอื่นๆ อาจจะมีโอกาสแตกต่างกันได้ ขึ้นกับเจ้าของผลงานจะเป็นผู้กำหนด และอาจมีบางกรณีที่ราคาสูงกว่าช่องทางอื่นๆ ได้เพราะ<br><br>
+
+&ensp;&ensp;- ราคาในระบบ In-App Purchase สามารถกำหนดเป็นขั้นๆ เช่น 35, 69, 99, ... เท่านั้น จึงไม่สามารถตั้งราคาจำหน่ายโดยอิสระ เช่น 80 บาทได้<br><br>
+
+&ensp;&ensp;- ระบบ In-App Purchase นั้น ทาง Apple คิดค่าธรรมเนียมสูงกว่าช่องทางอื่นๆ ทางเจ้าของผลงานจึงสามารถกำหนดส่วนลดผ่าน In-App Purchase ได้น้อยกว่าช่องทางอื่นๆ<br><br>
+
+1. เลือก E-book เล่มที่ต้องการ กดปุ่ม “Buy $1.99”
+                    </p>
+                    <img class="mx-auto d-block" src="pho/how_to/how-to-buy-apple-book-detail.jpg" style="max-width:600px;" width="100%"><br>
+                    <p>2. จากนั้นจะมีหน้าต่างขึ้นมา ให้ใส่รหัสผ่านของ Apple ID ของอุปกรณ์นั้น แล้วกดปุ่ม “ตกลง”</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how-to-buy-apple-password.png" style="max-width:600px;" width="100%"><br>
+                    <p>3. จากนั้นจะมีหน้าต่างยืนยันการซื้อ กดปุ่ม “ซื้อ” ระบบจะดำเนินการชำระเงินโดยหักจากบัญชีธนาคารของ Apple ID</p>
+                    <img class="mx-auto d-block" src="pho/how_to/how-to-buy-apple-buy.jpg" style="max-width:600px;" width="100%"><br>
+                </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithLinePayInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">บัตรเครดิต</a>ผ่าน LINE Pay <img src="pho/how_to/ico-line-pay.png" border="0" style="height: 25px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithLinePayInfo" style="display:none;background-color:#f6f6f6;">
+                <p><strong>ชำระด้วยบัตรเครดิตผ่านช่องทาง LINE Pay</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ iOS และ Android)<br><br>
+
+&ensp;การชำระเงินผ่านช่องทาง LINE Pay สำหรับการสั่งซื้อผ่านทาง เว็บไซต์ mebmarket.com, บนอุปกรณ์ iOS และ Android ทั้งนี้ยังไม่รองรับอุปกรณ์ Windows Phone โดยการชำระเงินผ่านช่องทางนี้จะต้องผูกบัตรเครดิตไว้กับบัญชี LINE ในการทำรายการครั้งแรก<br><br>
+
+&ensp;<a href="#usingWeb" style="color:#00bf6c;">-ทำรายการบนเว็บไซต์ mebmarket.com</a><br><br>
+
+&ensp;<a href="#usingAndroid" style="color:#00bf6c;">-ทำรายการบนอุปกรณ์ Android</a><br><br>
+
+&ensp;<a href="#usingIos" style="color:#00bf6c;">-ทำรายการบนอุปกรณ์ iOS</a><br><br>
+
+&ensp;<a href="#usingCredit" style="color:#00bf6c;">-สำหรับท่านที่ผูกบัตรเครดิตไว้แล้ว</a><br><br>
+
+<div id="usingWeb"><strong>ทำรายการบนเว็บไซต์ mebmarket.com</strong></div><br><br>
+
+1. เข้าสู่ระบบด้วยบัญชี LINE หรือสแกน QR Code</p>
+                <img class="mx-auto d-block" src="pho/how_to/line1.jpg" style="max-width:600px;" width="100%"><br>
+                2. ระบบจะขึ้นหน้านี้ ให้ตรวจสอบที่แอปพลิเคชั่น LINE Pay บนอุปกรณ์ที่ลงทะเบียนไว้ (บนมือถือหรือแท็บเล็ต)<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line2.jpg" style="max-width:600px;" width="100%"><br>
+                3. ที่อุปกรณ์ที่ลงทะเบียน LINE ไว้ เข้าใช้แอปพลิเคชั่น LINE Pay กดปุ่ม “เริ่มต้นใช้งาน” กรอกข้อมูลเพื่อลงทะเบียน<br><br>
+
+&ensp;&ensp;- หมายเลขโทรศัพท์<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+&ensp;&ensp;- ตั้งรหัสผ่าน LINE Pay<br><br>
+
+&ensp;&ensp;- ยืนยันเงื่อนไข<br><br>
+
+เรียบร้อยแล้วให้กดที่ปุ่ม “เสร็จสิ้น”<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line3.jpg" style="max-width:600px;" width="100%"><br>
+                4. ตรวจสอบราคาสินค้า แล้วเพิ่มบัตรเครดิตการ์ด และกรอกข้อมูลบัตรเครดิต กดปุ่ม “ลงทะเบียน”<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line5.jpg" style="max-width:600px;" width="100%"><br>
+                5. จากนั้นยืนยันการจ่ายเงินด้วยปุ่ม "Pay"<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line6.jpg" style="max-width:600px;" width="100%"><br>
+                6. เมื่อระบบดำเนินการสำเร็จจะปรากฏหน้านี้ขึ้นมา สามารถกลับไปดูที่หน้า My Shelf ได้เลย<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-line-pay-complete.jpg" style="max-width:600px;" width="100%"><br>
+                <img class="mx-auto d-block" src="pho/how_to/help_line2.jpg" style="max-width:600px;" width="100%"><br>
+                <p><div id="usingAndroid"><strong>ทำรายการบนอุปกรณ์ Android</strong></div><br>&ensp;1. ติดตั้งแอปพลิเคชั่น LINE Pay</p>
+                <img class="mx-auto d-block" src="pho/how_to/line_android1.jpg" style="max-width:600px;" width="100%"><br>
+                2. กรอกข้อมูลหมายเลขโทรศัพท์และอีเมล จากนั้นตั้งรหัสผ่าน 7 หลัก<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line_android2.jpg" style="max-width:600px;" width="100%"><br>
+                3. เพิ่มบัตรเครดิตและใส่ข้อมูลบัตรเครดิต<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line_android3.jpg" style="max-width:600px;" width="100%"><br>
+                4. ยืนยันรหัสผ่าน 7 หลักในการชำระสินค้า<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line_android4.jpg" style="max-width:600px;" width="100%"><br>
+                5. จากนั้นยืนยันการจ่ายเงินด้วยปุ่ม "Pay"<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line6.jpg" style="max-width:600px;" width="100%"><br>
+                <img class="mx-auto d-block" src="pho/how_to/help_line2.jpg" style="max-width:600px;" width="100%"><br>
+                <p><div id="usingIos"><strong>ทำรายการบนอุปกรณ์ iOS</strong></div><br>
+                1. ที่อุปกรณ์ที่ลงทะเบียน LINE ไว้ เข้าใช้แอปพลิเคชั่น LINE Pay กดปุ่ม “เริ่มต้นใช้งาน” กรอกข้อมูลเพื่อลงทะเบียน<br><br>
+
+&ensp;&ensp;- หมายเลขโทรศัพท์<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+&ensp;&ensp;- ตั้งรหัสผ่าน LINE Pay<br><br>
+
+&ensp;&ensp;- ยืนยันเงื่อนไข<br><br>
+
+เรียบร้อยแล้วให้กดที่ปุ่ม “เสร็จสิ้น”<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line3.jpg" style="max-width:600px;" width="100%"><br>
+                2. ตรวจสอบราคาสินค้า พร้อมกรอกข้อมูลบัตรเครดิต<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line5.jpg" style="max-width:600px;" width="100%"><br>
+                3. ตรวจสอบราคาสินค้า แล้วเพิ่มบัตรเครดิตการ์ด กรอกข้อมูลบัตรเครดิต จากนั้นยืนยันการจ่ายเงินด้วยปุ่ม "Pay"<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line6.jpg" style="max-width:600px;" width="100%"><br>
+                <img class="mx-auto d-block" src="pho/how_to/help_line2.jpg" style="max-width:600px;" width="100%"><br>
+                <p><div id="usingCredit"><strong>สำหรับท่านที่ผูกบัตรเครดิตไว้แล้ว ในการทำรายการสั่งซื้อครั้งต่อไป ทำได้ดังนี้</strong></div><br><br>
+
+1. หลังจากที่ทำรายการสั่งซื้อเรียบร้อยแล้ว มาที่แอปพลิเคชั่น LINE Pay ยืนยันรหัส 7 หลักในการชำระสินค้า</p><br>
+                <img class="mx-auto d-block" src="pho/how_to/line_android4.jpg" style="max-width:600px;" width="100%"><br>
+                2. ตรวจสอบราคาสินค้า จากนั้นยืนยันการจ่ายเงินด้วยปุ่ม "Pay"<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/line6.jpg" style="max-width:600px;" width="100%"><br>
+                3. เมื่อดำเนินการสั่งซื้อเสร็จเรียบร้อย จะปรากฏหน้านี้ขึ้นมา<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-line-pay-confirm.jpg" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithCreditInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">บัตรเครดิต</a>ผ่าน 2C2P <img src="pho/how_to/ico-credit-card-2c2p.png" border="0" style="height: 25px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithCreditInfo" style="display:none;background-color:#f6f6f6;">
+                <p><strong>ชำระด้วยบัตรเครดิตผ่านช่องทาง 2C2P</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ Android และ Windows)<br><br>
+
+&ensp;1. จะมีหน้าเว็บของตัวกลางชำระเงิน (2C2P) ให้กรอกรายละเอียดดังภาพ<br><br>
+
+&ensp;&ensp;- กรอกรหัสบัตรเครดิต 16 หลัก<br><br>
+
+&ensp;&ensp;- เลือกวันหมดอายุตามบัตรเครดิต<br><br>
+
+&ensp;&ensp;- กรอกชื่อเจ้าของบัตรเครดิต (ชื่อบนบัตรเป็นภาษาอังกฤษเท่านั้น)<br><br>
+
+&ensp;&ensp;- กรอกรหัส CVV/CVC2 (เลข 3 หลักด้านหลังบัตรเครดิต)<br><br>
+
+&ensp;เรียบร้อยแล้วกดที่ปุ่ม “Confirm Payment”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-2c2p-info.png" style="max-width:600px;" width="100%"><br>
+                <p>2. จากนั้นจะมีข้อความซึ่งเป็นรหัสในการดำเนินการต่อ ส่งเข้ามาทางเบอร์โทรศัพท์มือถือ ให้กรอกรหัสนั้นลงในช่องสี่เหลี่ยม จากนั้นจึงกดปุ่ม “Submit”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-2c2p-submit.png" style="max-width:600px;" width="100%"><br>
+                <p>3. เมื่อชำระเงินสำเร็จ จะมีหน้าขึ้นว่า Your payment transaction was successful และหน้าเว็บจะกลับมาที่ mebmarket.com อีกครั้ง</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-payment-success.jpg" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithCashInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">เงินสด</a>ผ่านจุดบริการชำระเงิน <img src="pho/how_to/ico-123-service.png" border="0" style="height: 25px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithCashInfo" style="display:none;background-color:#f6f6f6;">
+                <p>
+                    <strong>ชำระด้วยเงินสดผ่านจุดบริการชำระเงิน ตู้บุญเติม / CenPay / Tesco Lotus / JustPay / Big C / MPay / Family Mart / Pay@Post / True Money Express</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ Android และ Windows)<br><br>
+
+&ensp;1. เลือกช่องทางที่ต้องการชำระเงินและกรอกข้อมูลให้ครบถ้วน<br><br>
+
+&ensp;&ensp;- ชื่อ นามสกุล<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+&ensp;&ensp;- เบอร์โทรศัพท์<br><br>
+
+เรียบร้อยแล้วกดปุ่ม Continue Payment
+                </p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-123-1.png" style="max-width:600px;" width="100%"><br>
+                <p>2. จะแสดงหน้ายืนยันหมายเลขโทรศัพท์</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-123-2.png" style="max-width:600px;" width="100%"><br>
+                <p>3. จะมีหมายเลขการชำระเงิน จำนวนเงิน barcode และ qrcode ขึ้นมา สามารถพิมพ์แล้วนำไปยื่นชำระเงินตามช่องทางต่างๆ ได้เลย</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-123-3.png" style="max-width:600px;" width="100%"><br>
+                <p>4. หรือกดปุ่มดูคำแนะนำเพิ่มเติม จะแสดงช่องทางต่างๆ ที่ชำระเงินได้และแสดงค่าธรรมเนียมของช่องทางนั้นๆ</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-123-4.png" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithCounterInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">เงินสด</a>ผ่าน Counter Service <img src="pho/how_to/ico-counter-service-7-11.png" border="0" style="height: 25px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithCounterInfo" style="display:none;background-color:#f6f6f6;">
+                <p><strong>ชำระด้วยเงินสดผ่านระบบ เคาน์เตอร์เซอร์วิส 7-11 โดย Pay@All</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ Android และ Windows)<br><br>
+
+&ensp;1. ตรวจสอบจำนวนเงินที่ต้องชำระ และกรอกรายละเอียดลงในช่อง<br><br>
+
+&ensp;&ensp;- ชื่อ นามสกุล<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+เรียบร้อยแล้วกดปุ่ม “ทำรายการต่อ”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-pay-at-all-info.png" style="max-width:600px;" width="100%"><br>
+                <p>2. จะมีหน้ารายการ ใบแจ้งค่าสินค้า/บริการ และ barcode ขึ้นมา สามารถพิมพ์แล้วนำไปยื่นชำระเงินตามช่องทางต่างๆที่แจ้งไว้ด้านซ้ายได้เลย หรือจะจด PAYCODE (15หลัก) ใต้ barcode ไปแจ้งที่แคชเชียร์เพื่อชำระเงินก็ได้เช่นกัน<br><br>
+
+&ensp;โดยการชำระเงินผ่านทาง ผ่าน 7-11 โดย Pay@All จะคิดอัตราค่าบริการในการชำระเงินจำนวน 15 บาท ไม่ว่าจะซื้อ E-book พร้อมกันหลายเล่มหรือเล่มเดียวก็เก็บค่าบริการเพียง 1 ครั้งต่อบิล ทั้งนี้ช่องทางชำระเงินผ่าน 7-11 โดย Pay@All จะไม่มีการส่งข้อความ SMS รหัสการชำระเงินไปให้เหมือนระบบของ Paysbuy</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-pay-at-all-confirm.png" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithPaypalInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">บัตรเครดิตหรือบัญชี Paypal</a> <img src="pho/how_to/ico-paypal.png" border="0" style="height: 25px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithPaypalInfo" style="display:none;background-color:#f6f6f6;">
+                <p><strong>ชำระด้วยบัตรเครดิตหรือบัญชีผ่านช่องทาง PAYPAL</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ Android และ Windows)<br><br>
+
+&ensp;หากเลือกชำระเงินผ่าน PayPal จะมีค่าธรรมเนียม 11.45 บาทต่อครั้ง (จะซื้อพร้อมกันหลายเล่มหรือเล่มเดียวก็เก็บค่าธรรมเนียมเพียง 1 ครั้งต่อบิล) ท่านสามารถ Log-in ด้วยบัญชี PayPal ของท่าน หรือกรอกรายละเอียดบัตรเครดิตแล้วจ่ายผ่านบัตรเครดิตด้วยช่องทาง PayPal ก็ได้เช่นกัน<br><br>
+
+&ensp;1 ตรวจสอบราคาสินค้าที่ด้านซ้าย และกรอกข้อมูลบัตรเครดิตลงในช่อง<br><br>
+
+&ensp;&ensp;- ประเทศ<br><br>
+
+&ensp;&ensp;- หมายเลขบัตรเครดิต<br><br>
+
+&ensp;&ensp;- วันหมดอายุของบัตรเครดิต<br><br>
+
+&ensp;&ensp;- หมายเลข CVV<br><br>
+
+&ensp;&ensp;- ชื่อ นามสกุล<br><br>
+
+&ensp;&ensp;- ที่อยู่<br><br>
+
+&ensp;&ensp;- โทรศัพท์<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+&ensp;&ensp;- ท่านสามารถบันทึกข้อมูลบัตรเครดิตนี้ไว้ โดยสร้างบัญชี PayPal เพื่อบันทึกข้อมูล และ Login เข้าใช้ในครั้งต่อๆไปได้อย่างสะดวก<br><br>
+
+&ensp;เรียบแล้วแล้ว กดปุ่ม “ดำเนินการต่อ”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-paypal-info.jpg" style="max-width:600px;" width="100%"><br>
+                <p>2. จากนั้นจะมีข้อความซึ่งเป็นรหัสในการดำเนินการต่อ ส่งเข้ามาทางเบอร์โทรศัพท์มือถือ ให้กรอกรหัสนั้นลงในช่องสี่เหลี่ยม จากนั้นจึงกดปุ่ม “Submit”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-2c2p-submit.png" style="max-width:600px;" width="100%"><br>
+                <p>3. เมื่อชำระเงินสำเร็จ จะมีหน้าขึ้นว่า Your payment transaction was successful และหน้าเว็บจะกลับมาที่ mebmarket.com อีกครั้ง</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-payment-success.jpg" style="max-width:600px;" width="100%"><br>
+                <p>4. หรือหากท่านมีแอคเคาท์ของ PayPal ก็สามารถ Login เข้าใช้ได้เช่นกัน โดยไม่ต้องมากรอกรายละเอียดต่างๆ ในภายหลังอีก</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-paypal-login.jpg" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('buyWithAtmInfo')">
+                ชำระด้วย<a style="color:#00bf6c;">เงินสดผ่าน ATM/Intetnet Banking หรือเคาน์เตอร์ธนาคาร</a> <img src="pho/how_to/ownpaySale.png" border="0" style="height: 16px;vertical-align: middle;"> <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="buyWithAtmInfo" style="display:none;background-color:#f6f6f6;">
+                <p><strong>ชำระด้วยเงินสดผ่านช่องทาง ATM / Internet Banking หรือฝากเงินสดผ่านเคาน์เตอร์ธนาคาร</strong> (สำหรับการสั่งซื้อบนเว็บไซต์ mebmarket.com อุปกรณ์ Android และ Windows)<br><br>
+
+&ensp;การชำระเงินผ่าน ATM / Internet Banking สำหรับผู้ที่ไม่มีหรือไม่สะดวกใช้บัตรเครดิต โดยการชำระเงินผ่านช่องทางนี้ เมื่อยอดเกิน 500 บาทจะได้รับส่วนลดเพิ่มอีก 3% ส่วนค่าธรรมเนียมการโอน เนื่องจากธนาคารของเราใช้ธนาคารไทยพาณิชย์และธนาคารกรุงเทพ เป็นหลัก จึงอาจมีค่าธรรมเนียมการโอนต่างธนาคารได้ ขึ้นอยู่กับธนาคารของท่าน<br><br>
+
+&ensp;1. ให้กรอกรายละเอียดต่างๆ ให้ครบ โดยสามารถเลือกได้ว่าจะโอนเงินผ่าน ATM / Internet Banking หรือฝากเงินสดผ่านเคาน์เตอร์ธนาคาร<br><br>
+
+&ensp;&ensp;- หมายเลขสมุดบัญชี (ในกรณีที่โอนเงินผ่าน ATM / Internet Banking)<br><br>
+
+&ensp;&ensp;- อีเมล<br><br>
+
+&ensp;&ensp;- ชื่อ นามสกุล<br><br>
+
+&ensp;&ensp;- เบอร์โทรศัพท์<br><br>
+
+&ensp;เรียบร้อยแล้วกดปุ่ม “ทำรายการต่อ”</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-atm-info.png" style="max-width:600px;" width="100%"><br>
+                <p>2. จากนั้นจะมีคำแนะนำในการโอนเงินขึ้นมา ให้ปฏิบัติตามคำแนะนำนี้</p>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-buy-atm-success.png" style="max-width:600px;" width="100%"><br>
+            </div>
+            <hr>
+            <br><br>
+            <h4>Gift Code คืออะไร?</h4>
+            <br>
+            <p>ระบบ Gift Code เป็นนวัตกรรมการซื้อ e-book รูปแบบใหม่บนระบบ meb ที่ฉีกรูปแบบการซื้อเองอ่านเองแบบเดิมๆ
+                โดยเปิดโอกาสให้ท่านสามารถซื้อและส่ง e-book เป็นของขวัญให้เพื่อน (Buy as Gift) ได้ง่ายๆ
+                โดยที่หลังจากสั่งซื้อสำเร็จ ท่านจะได้รับรหัส Gift Code มา และส่งต่อให้นักอ่านท่านอื่นๆ เพื่อรับ
+                e-book ได้ฟรีผ่านแอปพลิเคชันในระบบ meb หรือบนเว็บไซต์ mebmarket.com ทันที<br><br>
+
+                ทั้งนี้ นอกจากซื้อ Gift Code โดยตรงผ่าน meb แล้ว ในบางครั้งฤกษ์งามยามดี ท่านยังมีสิทธิ์ลุ้นรับ Gift
+                Code ได้ฟรีจากสำนักพิมพ์ในกิจกรรมร่วมสนุกผ่านทางหน้าเว็บไซต์ เฟซบุ๊ก
+                หรือกิจกรรมประชาสัมพันธ์ผลงานต่างๆ ของสำนักพิมพ์อีกด้วย</p>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('howToUseGiftCode')">
+                วิธีการใช้งาน Gift Code <a style="color:#00bf6c;">(คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="howToUseGiftCode" style="display:none;background-color:#f6f6f6;">
+                <strong>ได้ Gift Code มาแล้วจะใช้อย่างไร</strong><br><br>
+
+                &ensp;&ensp;หลังจากที่นักอ่านได้ Gift Code มาแล้ว การนำไปใช้จะต้องนำรหัสที่ได้มากรอกลงในระบบของ meb ซึ่งสามารถทำได้ผ่าน 3 ช่องทางดังนี้<br><br>
+
+                &ensp;&ensp;1. ผ่านทางเว็บไซต์ mebmarket.com<br><br>
+
+                &ensp;&ensp;2. บนแอพพลิเคชัน iOS (iPhone, iPad)<br><br>
+
+                &ensp;&ensp;3. บนแอพพลิเคชัน Android<br><br>
+
+                <strong>[1.] บนเว็บไซต์ mebmarket.com</strong><br><br>
+
+                &ensp;&ensp;<u>มีขั้นตอนดังนี้</u><br><br>
+
+                &ensp;&ensp;1.1 Login เข้าสู่ระบบ แล้วกดที่ “Icon บัญชีของฉัน”<br><br>
+
+                &ensp;&ensp;1.2 กดเลือกเมนู Gift Code (หรือกดตรงนี้ได้เลย)<br><br>
+
+                &ensp;&ensp;1.3 กรอกรหัส Gift Code ลงในช่อง Enter Code<br><br>
+
+                &ensp;&ensp;1.4 ระบบจะแสดงหนังสือที่ได้รับจาก Gift Code นั้นๆ เพื่อให้คุณนักอ่านเลือกรับ<br><br>
+
+                &ensp;&ensp;1.5 กดปุ่ม “ฟรี” เพื่อรับหนังสือ ก็จะสามารถเปิดอ่านหนังสือดังกล่าวได้บนแอพ meb ทันที<br><br>
+                <img class="mx-auto d-block" src="pho/how_to/how-to-use-gift-code-web-mobile.png" style="max-width:600px;" width="100%"><br>
+                <strong>[2.] บนแอพพลิเคชัน iOS (iPhone, iPad)</strong><br><br>
+
+&ensp;&ensp;<u>มีขั้นตอนดังนี้</u><br><br>
+
+&ensp;&ensp;2.1 เปิดแอพ meb (แนะนำให้ Login ด้วยค่ะ)<br><br>
+
+&ensp;&ensp;2.2 เลือกเมนู “ตั้งค่า”<br><br>
+
+&ensp;&ensp;2.3 เลือกเมนู “สแกนโค้ด” ที่อยู่ในหัวข้อ “ร้านหนังสือ”<br><br>
+
+&ensp;&ensp;2.4 กรอกรหัส Gife Code ที่ได้รับมาลงในช่อง Insert Code<br><br>
+
+&ensp;&ensp;2.5 ระบบจะแสดงรายชื่อหนังสือที่ได้รับจาก Gift Code นั้นๆ เพื่อให้คุณนักอ่านเลือกรับ<br><br>
+
+&ensp;&ensp;2.6 กดปุ่ม “ฟรี” เพื่อรับหนังสือ ก็จะสามารถเปิดอ่านหนังสือดังกล่าวได้ทันที<br><br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/iOS-gift-code-1.png" style="max-width:400px;" width="100%">
+                <img class="my-2 mx-auto d-block" src="pho/how_to/iOS-gift-code-2.png" style="max-width:400px;" width="100%">
+                <img class="my-2 mx-auto d-block" src="pho/how_to/iOS-gift-code-3.png" style="max-width:400px;" width="100%">
+                <strong>[3.] บนแอพพลิเคชัน Android</strong><br><br>
+
+&ensp;&ensp;<u>มีขั้นตอนดังนี้</u><br><br>
+
+&ensp;&ensp;3.1 เปิดแอพ meb (แนะนำให้ Login ด้วยค่ะ)<br><br>
+
+&ensp;&ensp;3.2 เลือกเมนู “ตั้งค่า”<br><br>
+
+&ensp;&ensp;3.3 เลือกเมนู “สแกนโค้ด” ที่อยู่ในหัวข้อ “ข้อมูลของฉัน”<br><br>
+
+&ensp;&ensp;3.4 กรอกรหัส Gife Code ที่ได้รับมาลงในช่อง Insert Code<br><br>
+
+&ensp;&ensp;3.5 ระบบจะแสดงรายชื่อหนังสือที่ได้รับจาก Gift Code นั้นๆ เพื่อให้คุณนักอ่านเลือกรับ<br><br>
+
+&ensp;&ensp;3.6 กดปุ่ม “ฟรี” เพื่อรับหนังสือ ก็จะสามารถเปิดอ่านหนังสือดังกล่าวได้ทันที<br><br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/Andorid-gift-code-1.png" style="max-width:400px;" width="100%">
+                <img class="my-2 mx-auto d-block" src="pho/how_to/Andorid-gift-code-2.png" style="max-width:400px;" width="100%">
+                <img class="my-2 mx-auto d-block" src="pho/how_to/Andorid-gift-code-3.png" style="max-width:400px;" width="100%">
+            </div>
+            <hr>
+        </div>
+        <div class="tab-pane" id="read" role="tabpanel" aria-labelledby="profile-tab">
+            <br>
+            <h4>How to Read</h4>
+            <br>
+            <img class="img-fluid"
+                src="pho/how_to/fbcoverphoto_windows.jpg">
+            <p>ท่านสามารถอ่าน e-book ของ meb ได้ บนอุปกรณ์ต่างๆได้ที่หลากหลาย ไม่ว่าจะเป็น Smart Phone, Tablet
+                หรือคอมพิวเตอร์ ผ่าน Application ชื่อ meb: mobile e-books บนระบบยอดนิยมต่างๆ ดังนี้</p>
+            <table class="mx-auto">
+                <tbody>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/applexcopy.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>iPad, iPhone, iPod touch (<a href="http://itunes.apple.com/th/app/meb-mobile-e-books/id453213960?mt=8" style="color:#00bf6c;">ดาวน์โหลดได้จาก App Store</a>)<br>
+                            <a onclick="showHow('howToReadIos')" href="#howToReadIos" style="color:#00bf6c;">วิธีดาวน์โหลดและติดตั้ง</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/droidxcopy.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>Android (<a href="https://play.google.com/store/apps/details?id=com.askmedia.meb" style="color:#00bf6c;">ดาวน์โหลดได้จาก Google Play Store</a>)<br>
+                            <a onclick="showHow('howToReadAndroid')" href="#howToReadAndroid" style="color:#00bf6c;">วิธีดาวน์โหลดและติดตั้ง</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/macxcopy.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>Mac OS X 10.9 (Mavericks) ขึ้นไป (<a href="https://itunes.apple.com/th/app/meb-mobile-e-books/id953922892?l=th&ls=1&mt=12" style="color:#00bf6c;">ดาวน์โหลดได้จาก Mac App Store</a>)<br>
+                            <a onclick="showHow('howToReadMac')" href="#howToReadMac" style="color:#00bf6c;">วิธีดาวน์โหลดและติดตั้ง</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/droidxcopy.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>E-Reader (<a href="https://play.google.com/store/apps/details?id=com.askmedia.mebeink&hl=en" style="color:#00bf6c;">ดาวน์โหลดได้จาก Google Play Store</a>)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/wp8copy.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>Windows 10 (<a href="https://www.microsoft.com/th-th/store/apps/meb-mobile-e-books-for-windows-10/9nblggh4rww7" style="color:#00bf6c;">ดาวน์โหลดได้ที่นี่</a>)<br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:52px;">
+                            <img class="media-object my-auto"
+                        src="pho/how_to/huawei.png">
+                        </td>
+                        <td style="padding-top:21px;">
+                            <p>Huawei (<a href="https://appgallery.huawei.com/#/app/C100103461" style="color:#00bf6c;">ดาวน์โหลดได้ที่นี่</a>)<br></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('howToReadIos')">
+                วิธีอ่าน e-book บน <a style="color:#00bf6c;">iOS (คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="howToReadIos" style="display:none;background-color:#f6f6f6;">
+                1. เปิด App Store<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-ios-1.jpg" style="max-width:240px;" width="100%"><br>
+                2. ค้นหาด้วยคำว่า meb แล้วเลือก meb : mobile e-books<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-ios-2.jpg" style="max-width:240px;" width="100%"><br>
+                3. กดดาวน์โหลดและติดตั้งโปรแกรม meb : mobile e-books<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-ios-3.jpg" style="max-width:240px;" width="100%"><br>
+                4. หลังจากติดตั้งเสร็จแล้วสามาถกดที่ปุ่ม open เพื่อเริ่มต้นโปรแกรม<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-ios-4.jpg" style="max-width:240px;" width="100%"><br>
+                5. ใส่Account เดียวกับที่ใช้ใน Application meb: mobile e-books บน Smart Phone, Tablet หรือเว็บ www.mebmarket.com แล้วกด Login หรือสร้าง Account ใหม่ได้โดยกดปุ่ม Create meb Account<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-ios-5.jpg" style="max-width:240px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('howToReadAndroid')">
+                วิธีอ่าน e-book บน <a style="color:#00bf6c;">Android (คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="howToReadAndroid" style="display:none;background-color:#f6f6f6;">
+                1. เปิด Google Play Store<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-1.jpg" style="max-width:240px;" width="100%"><br>
+                2. ค้นหาด้วยคำว่า meb และเลือกโปรแกรม Meb : Mobile E-Books<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-2.jpg" style="max-width:240px;" width="100%"><br>
+                3. กดติดตั้งโปรแกรม<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-3.jpg" style="max-width:240px;" width="100%"><br>
+                4. จะแสดงข้อตกลงเกี่ยวกับการเข้าถึงอุปกรณ์ หลังจากอ่านให้กดเลือกยอมรับในเงื่อนไข<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-4.jpg" style="max-width:240px;" width="100%"><br>
+                5. หลังจากติดตั้งเสร็จแล้วสามาถกดที่ปุ่ม open เพื่อเริ่มต้นโปรแกรม<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-5.jpg" style="max-width:240px;" width="100%"><br>
+                6. ใส่Account เดียวกับที่ใช้ใน Application meb: mobile e-books บน Smart Phone, Tablet หรือเว็บ www.mebmarket.com แล้วกด Login หรือสร้าง Account ใหม่ได้โดยกดปุ่ม Create meb Account<br>
+                <img class="my-2 mx-auto d-block" src="pho/how_to/setup-and-6.jpg" style="max-width:240px;" width="100%"><br>
+            </div>
+            <hr>
+            <div class="howToInfo" style="cursor:pointer;" onclick="showHow('howToReadMac')">
+                วิธีอ่าน e-book บน <a style="color:#00bf6c;">Mac สำหรับ OS X 10.9 (Mavericks) ขึ้นไป (คลิกเพื่อดูรายละเอียด)</a>
+            </div>
+            <div class="p-4 howToInfo" id="howToReadMac" style="display:none;background-color:#f6f6f6;">
+                1. เปิด Mac App Store<br><br><br>
+
+
+2. ค้นหาด้วยคำว่า meb แล้วเลือก meb : mobile e-books<br><br><br>
+
+
+3. กดดาวน์โหลดและติดตั้งโปรแกรม meb : mobile e-books<br><br><br>
+
+
+4. หลังจากติดตั้งเสร็จแล้วสามาถกดที่ปุ่ม open เพื่อเริ่มต้นโปรแกรม<br><br><br>
+
+
+5. ใส่Account เดียวกับที่ใช้ใน Application meb: mobile e-books บน Smart Phone, Tablet หรือเว็บ www.mebmarket.com แล้วกด Login หรือสร้าง Account ใหม่ได้โดยกดปุ่ม Create meb Account
+            </div>
+            <hr>
+        </div>
+
+        <div style="font-size:14px" class="tab-pane" id="sell" role="tabpanel" aria-labelledby="contact-tab">
+            <br>
+            <h4>How to Sell</h4>
+            <br>
+            <p>หลังจากที่เข้ามายังเว็บไซต์ <a href="index.html" style="color:#00bf6c;">https://www.mebmarket.com/index.php</a> คุณนักเขียนสามารถ สมัครขาย E-book กับพวกเรา ได้ง่าย ๆ โดยทำตามขั้นตอน ดังนี้<br><br>
+                <a href="book_regis.html" style="color:#00bf6c;">คลิกสมัครขายอีบุ๊ก</a> ที่หน้าแรกของเว็บไซต์</p>
+            <img class="img-fluid" src="pho/how_to/HowtoSell03.jpg"><br><br>
+            <p class="text-center" style="color:gray;">ทางเข้าหน้าสมัครขายอีบุ๊ก Desktop</p><br><br>
+                <img class="mx-auto d-block" style="width: 100%;max-width: 300px;" src="pho/how_to/HowtoSell01.jpg"><br>
+            
+            <p class="text-center" style="color:gray;">ทางเข้าหน้าสมัครขายอีบุ๊ก Mobile (1)</p><br><br>
+            <img class="d-block mx-auto" style="width: 100%;max-width: 300px;" src="pho/how_to/HowtoSell02.jpg">
+            <p class="text-center" style="color:gray;">ทางเข้าหน้าสมัครขายอีบุ๊ก Mobile (2)</p><br><br><br>
+            <p>
+                เมื่อคุณนักเขียนเข้าหน้าสมัครขายอีบุ๊กแล้ว ให้กรอกข้อมูลให้ครบถ้วน <strong>แล้วคุณนักเขียนจะต้องอ่านเงื่อนไขข้อตกลงการให้บริการระบบวรรณกรรมอิเล็กทรอนิกส์ และข้อตกลงเงื่อนไขส่วนแบ่งรายได้</strong> ซึ่งเป็นส่วนสำคัญมาก ๆ ที่คุณนักเขียนจะต้องอ่านอย่างรอบคอบ และทำความเข้าใจ แล้วกดยอมรับเงื่อนไข<br><br>
+หลังจากที่ยอมรับเงื่อนไขแล้ว คุณนักเขียนสามารถกด Continue หลังจากนั้น ก็รอการอนุมัติจากเจ้าหน้าที่ของ meb ซึ่งใช้เวลาประมาณ 1 วันทำการ หลังจากที่ได้รับการอนุมัติ คุณนักเขียนก็สามารถอัปโหลดหนังสือ เข้ามาที่ระบบได้เลย<br><br>
+หากมีข้อสงสัย คุณนักเขียนสามารถติดต่อสอบถามเข้ามาคุยกับเราได้ <a href="contract.html" style="color:#00bf6c;">ที่นี่</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+function showHow(i){
+    let x = document.getElementById(i);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <div class="fot">
+    <div class="row foot">
+      <div class="col-sm-3" >
+        <p><b>เลือกหมวดหมู่</b></p>
+        <h6>นิยาย</h6>
+        <h6>การ์ตูน</h6>
+        <h6>แม็กกาซีน</h6>
+        <h6>ทั่วไป</h6>
+        <h6>หนังสือเสียง</h6>
+        <h6>บุฟเฟต์</h6>
+      </div>
+      <div class="col-sm-3">
+        <p><b>บริการช่วยเหลือ</b></p>
+        <h6>วิธีการใช้งาน</h6>
+        <h6>ขายอีบุ๊กกับเรา</h6>
+        <h6>meb coin</h6>
+        <h6>Stamp คืออะไร?</h6>
+        <h6>Gift Code คืออะไร?</h6>
+        <h6>เงื่อนไขในการใช้บริการ</h6>
+        <h6>นโยบายความเป็นส่วนตัว</h6>
+        <h6>แผนผังเว็บไซต์</h6>
+      </div>
+      <div class="col-sm-3">
+        <p><b>เกี่ยวกับเรา</b></p>
+        <h6>ข่าวสารและกิจกรรม</h6>
+        <h6>ติดต่อเรา</h6>
+        <img src="pho/ic-share-facebook.png" alt="">
+      </div>
+      <div class="col-sm-3">
+        <p><b>กลุ่มธุรกิจในเครือ</b></p>
+        <h6>Central</h6>
+        <h6>OfficeMate</h6>
+        <h6>B2S</h6>
+        <h6>Power Buy</h6>
+        <h6>Supersports</h6>
+        <h6>Tops</h6>
+        <h6>Hytexts</h6>
+      </div>
+    </div>
+  </div>
+  <!--ส่วน footer--->
+  <div style="display:table;" class="footer">
+        <div class="dropup show"
+            style="float:left;border-right: solid 1px #b8b8b8;padding-left: 10px;padding-right: 15px;;">
+            <button type="button" class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                style="border:none;background:#e6e6e6;">
+                <img style="width:24px;height:24px;"
+                    src="pho/ic-flag-th@2x.png">
+                <span style="font-family: notosansregular;font-size: 14px;">ไทย</span>
+                <img style="width:11px;height:11px;"
+                    src="pho/arrow-down@2x.png">
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><img style="width:24px;height:24px;"
+                        src="pho/ic-flag-th@2x.png">ไทย</a>
+                <a class="dropdown-item" href="#"><img style="width:24px;height:24px;"
+                        src="pho/ic-flag-en@2x.png">English</a>
+            </div>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:left">
+            <div style="display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" id="ic-mobile-home" width="24" height="24" viewBox="0 0 24 24">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #099357
+                            }
+
+                            .cls-2 {
+                                fill: none
+                            }
+                        </style>
+                    </defs>
+                    <path id="Path_1095"
+                        d="M21.962 3h-6.088A2.071 2.071 0 0 0 13.8 5.074v10.852A2.071 2.071 0 0 0 15.874 18h6.088a2.071 2.071 0 0 0 2.074-2.074V5.074A2.071 2.071 0 0 0 21.962 3zm-7.28 3.353h8.471v6.838h-8.471zm1.191-2.471h6.088a1.186 1.186 0 0 1 1.191 1.191v.4h-8.47v-.4a1.186 1.186 0 0 1 1.192-1.191zm6.088 13.235h-6.087a1.186 1.186 0 0 1-1.191-1.191v-1.852h8.471v1.853a1.186 1.186 0 0 1-1.192 1.191z"
+                        class="cls-1" data-name="Path 1095" transform="translate(-6.801 2)" />
+                    <path id="Rectangle_241" d="M0 0h24v24H0z" class="cls-2" data-name="Rectangle 241" />
+                </svg>
+            </div>
+            <svg style="width: 18px;height: 22px;margin-top: -8px;">
+                <use xlink:href="#ic-mobile-home" style="fill:#00bf6c;"></use>
+            </svg>
+            <a style="color:#00bf6c;" title="Download App" href="howTo.html">ดาวน์โหลดแอพ</a>
+        </div>
+        <div style="background-color:#00bf6c; font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#fff;" title="Contact Us" href="contract.html">ติดต่อเรา</a>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#00bf6c;" title="How to" href="howTo.html">วิธีการใช้งาน</a>
+        </div>
+        <div style="font-size: 14px;padding: 5px 15px;float:right;">
+            <a style="color:#00bf6c;" title="Register Publisher" href="book_regis.html">สมัครขายอีบุ๊ค</a>
+        </div>
+    </div>
+  <!--ส่วน footer--->
+</body>
+
+</html>
